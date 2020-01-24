@@ -13,3 +13,4 @@ Abhishek Kakar
 Hritesh Manda
 Kevin Ward
 Corey Giannakas
+Zachary Fazal

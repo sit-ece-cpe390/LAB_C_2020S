@@ -66,7 +66,13 @@ double grav(double m1, Vec3d v1, double m2, Vec3d v2);
 
 
 // array problems
-double mean(int x[], int n);
+double mean(int x[], int n){
+  int sum = 0;
+  for (int i = 0; i < n; i++) {
+    sum+=x[i];
+  }
+  return double(sum)/double(n);
+}
 int max(int x[], int n);
 int min(int x[], int n);
 double prod(int x[], int n);

@@ -11,3 +11,5 @@ Paul Tziranis
 Julia Chung
 Abhishek Kakar
 Hritesh Manda
+Kevin Ward
+Corey Giannakas

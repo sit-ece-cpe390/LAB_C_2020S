@@ -3,5 +3,13 @@ Matthew Martin
 Jayden Pereira
 Bradley O'Connell
 Stephan Abrimian
+Marko Piasevoli
+Stephan Abrimiam
+Johnny Intriago
 Daren Tay
+<<<<<<< HEAD
 Mingyao Tang
+=======
+Paul Tziranis
+Julia Chung
+>>>>>>> 5f522e04401aaf9bc340d76c4dd4db607ced4811

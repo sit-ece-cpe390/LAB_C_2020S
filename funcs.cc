@@ -8,10 +8,23 @@
 #include <iostream>
 #include <cstdint>
 using namespace std;
-uint32_t sum(uint32_t a, uint32_t b) {
-  return a+b;
+uint64_t sum(uint32_t a, uint32_t b) {
+  uint64_t sum = 0;
+  for (int i = a; i <= b; i++) {
+    sum+=i;
+  }
+  return sum;
 }
-uint64_t prod(uint32_t a, uint32_t b);
+uint64_t prod(uint32_t a, uint32_t b) {
+	uint64_t product = 1;
+
+	while (a <= b) {
+		product *= a;
+		a++;
+	}
+
+	return product;
+}
 uint32_t sumsq(uint32_t a, uint32_t b);
 uint32_t countPrimes(uint32_t a, uint32_t b);
 bool isPrime(uint32_t p);

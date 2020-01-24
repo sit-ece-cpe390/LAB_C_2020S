@@ -29,23 +29,15 @@ uint32_t sumsq(uint32_t a, uint32_t b);
 uint32_t countPrimes(uint32_t a, uint32_t b);
 bool isPrime(uint32_t p)
 {
-  cout << "Input a number";
-  cin >> p;
-  uint32_t i = 0;
-  int truefalse = 0;
     for(i = 2; i<=p/2;i++)
       {
 	if(p%i == 0)
 	  {
-	    truefalse = 1;
+	    isPrime = false;
 	    break;
 	  }
       }
-  if (truefalse = 0)
-    cout << "True";
-  else
-    cout << "False";
-  return 0;
+    return isPrime;
 }
 void swap(uint32_t& a, uint32_t& b);
 uint32_t gcd(uint32_t a, uint32_t b);
@@ -69,7 +61,16 @@ double area(double x1, double y1,
 						double x2, double y2,
 						double x3, double y3,
 						double x4, double y4);
-double perimeter(double x1, double y1, double x2, double y2, double x3, double y3);
+double perimeter(double x1, double y1, double x2, double y2, double x3, double y3) {
+	float A = sqrt((double)(x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+	float B = sqrt((double)(x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3));
+	float C = sqrt((double)(x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3));
+
+	float s = 0;
+	s = A + B + C;
+	return s;
+}
+
 
 double perimeter(double x1, double y1,
 								 double x2, double y2,
@@ -127,7 +128,13 @@ int max(int x[], int n) {
 	return maxValue;
 }
 int min(int x[], int n);
-double prod(int x[], int n);
+double prod(int x[], int n){
+  uint32_t product = 0;
+  for (int i = 0; i < n; i++){
+    product = product * [i];
+  }
+  return double(product);
+}
 int sum(int x[], int n);
 void demean(double x[], int n);
 void normalize(double x[], int n);

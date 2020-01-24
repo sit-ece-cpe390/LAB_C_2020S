@@ -24,6 +24,13 @@ uint64_t prod(uint32_t a, uint32_t b) {
 	}
 
 	return product;
+	========================
+          uint64_t z = 1;
+	  for (a; a <= b; a++){
+	    z *= a ;
+	  }
+	  return z;
+	  
 }
 uint32_t sumsq(uint32_t a, uint32_t b);
 uint32_t countPrimes(uint32_t a, uint32_t b);

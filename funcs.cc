@@ -93,7 +93,17 @@ public:
 double dot(Vec3d v1, Vec3d v2);
 
 Vec3d cross(Vec3d v1, Vec3d v2);
+{
 
+    int v1[] = { x, y, z };
+    int v2[] = { x, y, z }; 
+    int cross_P[n];
+    cout << "Cross product:";
+    crossProduct(v1, v2, cross_P);
+    for (int i = 0; i < n; i++)
+        cout << cross_P[i] << " ";
+    return 0;
+}
 double grav(double m1, Vec3d v1, double m2, Vec3d v2);
 
 
@@ -131,6 +141,26 @@ uint32_t countEvens(const int x[], int n);
 void addToEach(int x[], int n, int delta);
 
 void removeVowels(char s[]);
+{char str1[50], str2[50];
+      int length = 0, count, a = 0;
+      printf("\nEnter A String:\t");
+      scanf("%s", str1);
+      length = strlen(str1);
+      for(count = 0; count <= length; count++)
+      {
+            if((str1[count] == 97 || str1[count] == 101 || str1[count] == 105 || str1[count] == 111 || str1[count] == 117) ||(str1[count] == 65 || str1[count] == 69 || str1[count] == 73 || str1[count] == 79 || str1[count] == 85 ))
+            {
+                  str1[count] = ' ';
+            }
+            else
+            {
+                  str2[a++] = str1[count];
+            }
+      }
+      str2[a] = '\0';
+      printf("\nString After Removing Vowels:\t%s\n\n", str2);
+      return 0;
+    }
 void reverse(char s[]);
 bool isPalindrome(const char s[]);
 uint32_t checksum(const char s[]);

@@ -61,7 +61,16 @@ double area(double x1, double y1,
 						double x2, double y2,
 						double x3, double y3,
 						double x4, double y4);
-double perimeter(double x1, double y1, double x2, double y2, double x3, double y3);
+double perimeter(double x1, double y1, double x2, double y2, double x3, double y3) {
+	float A = sqrt((double)(x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+	float B = sqrt((double)(x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3));
+	float C = sqrt((double)(x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3));
+
+	float s = 0;
+	s = A + B + C;
+	return s;
+}
+
 
 double perimeter(double x1, double y1,
 								 double x2, double y2,

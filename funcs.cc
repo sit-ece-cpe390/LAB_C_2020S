@@ -16,10 +16,10 @@ uint64_t sum(uint32_t a, uint32_t b) {
   return sum;
 }
 uint64_t prod(uint32_t a, uint32_t b) {
-	uint64_t product = 0;
+	uint64_t product = 1;
 
 	while (a <= b) {
-		product += a*b;
+		product *= a;
 		a++;
 	}
 

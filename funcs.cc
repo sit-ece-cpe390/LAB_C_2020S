@@ -144,7 +144,15 @@ void squareRoot(double x[], int n);
 uint32_t strip(double x[], uint32_t n, double a, double b);
 void reverse(int x[], int n);
 uint32_t randomElement(const int x[], int n);
-uint32_t countEvens(const int x[], int n);
+uint32_t countEvens(const int x[],int n){
+  uint32_t Even = 0;
+  for(int i = 0; i < n; i++){
+    if((x[i]%2)==0){
+      Even +=1;
+    }
+  }
+    return Even;
+}
 void addToEach(int x[], int n, int delta);
 
 void removeVowels(char s[]);

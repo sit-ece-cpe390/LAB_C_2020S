@@ -86,7 +86,17 @@ double mean(int x[], int n){
   }
   return double(sum)/double(n);
 }
-int max(int x[], int n);
+int max(int x[], int n) {
+	int maxValue = 0;
+
+	for (int i = 0; i < n; i++) {
+		if ( x[i] > maxValue ) {
+			maxValue = x[i];
+		}
+	}
+
+	return maxValue;
+}
 int min(int x[], int n);
 double prod(int x[], int n);
 int sum(int x[], int n);

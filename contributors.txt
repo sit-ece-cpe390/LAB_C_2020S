@@ -4,7 +4,6 @@ Jayden Pereira
 Bradley O'Connell
 Stephan Abrimian
 <<<<<<< HEAD
-Kevin Ward
 =======
 Marko Piasevoli
 Stephan Abrimiam
@@ -12,5 +11,7 @@ Johnny Intriago
 Daren Tay
 Paul Tziranis
 Julia Chung
+Abhishek Kakar
 Hritesh Manda
 >>>>>>> 7fb1c4f31e9dd47287b098381879372322b6bc1e
+Kevin Ward

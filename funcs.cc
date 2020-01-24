@@ -8,8 +8,12 @@
 #include <iostream>
 #include <cstdint>
 using namespace std;
-uint32_t sum(uint32_t a, uint32_t b) {
-  return a+b;
+uint64_t sum(uint32_t a, uint32_t b) {
+  uint64_t sum = 0;
+  for (int i = a; i <= b; i++) {
+    sum+=i;
+  }
+  return sum;
 }
 uint64_t prod(uint32_t a, uint32_t b);
 uint32_t sumsq(uint32_t a, uint32_t b);

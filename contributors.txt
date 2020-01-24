@@ -12,4 +12,10 @@ Mingyao Tang
 =======
 Paul Tziranis
 Julia Chung
+<<<<<<< HEAD
 >>>>>>> 5f522e04401aaf9bc340d76c4dd4db607ced4811
+=======
+Abhishek Kakar
+Hritesh Manda
+>>>>>>> d67cf35463d91ab00d8c01dbdd669fbb15bd9d52
+Mingyao Tang

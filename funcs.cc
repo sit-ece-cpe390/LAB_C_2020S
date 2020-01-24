@@ -26,8 +26,35 @@ uint64_t prod(uint32_t a, uint32_t b) {
 	return product;
 }
 uint32_t sumsq(uint32_t a, uint32_t b);
-uint32_t countPrimes(uint32_t a, uint32_t b);
-bool isPrime(uint32_t p);
+uint32_t countPrimes(uint32_t a, uint32_t b){
+    int numberOfPrimes = 0;
+    for(int i = a; i <= b; ++i) {
+        if (isPrime(i)){
+            ++numberOfPrimes;
+        }
+    }
+    return numberOfPrimes;
+}
+bool isPrime(uint32_t p)
+{
+  uint32_t p = 0;
+  cout << "Input a number";
+  cin >> p;
+  int truefalse = 0;
+    for(i = 2; i<=p/2;i++)
+      {
+	if(p%i == 0)
+	  {
+	    truefalse = 1;
+	    break;
+	  }
+      }
+  if (truefalse = 0)
+    cout << "True";
+  else
+    cout << "False";
+  return 0;
+}
 void swap(uint32_t& a, uint32_t& b);
 uint32_t gcd(uint32_t a, uint32_t b);
 uint32_t lcm(uint32_t a, uint32_t b);
@@ -86,10 +113,26 @@ double mean(int x[], int n){
   }
   return double(sum)/double(n);
 }
-int max(int x[], int n);
+int max(int x[], int n) {
+	int maxValue = 0;
+
+	for (int i = 0; i < n; i++) {
+		if ( x[i] > maxValue ) {
+			maxValue = x[i];
+		}
+	}
+
+	return maxValue;
+}
 int min(int x[], int n);
 double prod(int x[], int n);
-int sum(int x[], int n);
+int sum(int x[], int n){
+    int sum = 0;
+    for(int i = 0; i < n; ++i){
+        sum += x[i];
+    }
+    return sum;
+}
 void demean(double x[], int n);
 void normalize(double x[], int n);
 void round(double x[], int n);

@@ -14,7 +14,25 @@ uint64_t sum(uint32_t a, uint32_t b) {
     sum+=i;
   }
   return sum;
-}
+  ======================
+ int c = 0;
+   int num = 0;
+   int sum = 0;
+   if (a < b){ 
+     num = a;
+     c = b;
+   }
+   else if (b < a){
+     num = b;
+     c = a;
+   }
+   for(sum = 0;num <= c; num++){
+     sum = sum + num;
+   }
+
+   cout << sum << endl;
+   >>>>>>>>>>>>>>>>>>>
+
 uint64_t prod(uint32_t a, uint32_t b) {
 	uint64_t product = 1;
 

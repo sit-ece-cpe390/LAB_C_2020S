@@ -15,7 +15,16 @@ uint64_t sum(uint32_t a, uint32_t b) {
   }
   return sum;
 }
-uint64_t prod(uint32_t a, uint32_t b);
+uint64_t prod(uint32_t a, uint32_t b) {
+	uint64_t product = 0;
+
+	while (a <= b) {
+		product += a*b;
+		a++;
+	}
+
+	return product;
+}
 uint32_t sumsq(uint32_t a, uint32_t b);
 uint32_t countPrimes(uint32_t a, uint32_t b);
 bool isPrime(uint32_t p);

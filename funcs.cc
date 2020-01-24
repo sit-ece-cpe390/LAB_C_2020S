@@ -47,7 +47,11 @@ bool isPrime(uint32_t p)
     return isPrime;
 }
 void swap(uint32_t& a, uint32_t& b);
-uint32_t gcd(uint32_t a, uint32_t b);
+uint32_t gcd(uint32_t a, uint32_t b)
+{ if (b == 0)
+    return a;
+  return gcd(b, a % b);
+}
 uint32_t lcm(uint32_t a, uint32_t b);
 double fact(uint32_t n);
 uint64_t sum(uint32_t n);
@@ -143,7 +147,16 @@ double prod(int x[], int n){
   return double(product);
 }
 int sum(int x[], int n);
-void demean(double x[], int n);
+void demean(double x[], int n){
+double findMean(int x[], int n)
+  int sum = 0;
+ for (int i = 0; i < n; i++){
+   sum += x[i];
+ }
+   
+
+      
+  }
 void normalize(double x[], int n);
 void round(double x[], int n);
 void square(double x[], int n);
@@ -151,7 +164,15 @@ void squareRoot(double x[], int n);
 uint32_t strip(double x[], uint32_t n, double a, double b);
 void reverse(int x[], int n);
 uint32_t randomElement(const int x[], int n);
-uint32_t countEvens(const int x[], int n);
+uint32_t countEvens(const int x[],int n){
+  uint32_t Even = 0;
+  for(int i = 0; i < n; i++){
+    if((x[i]%2)==0){
+      Even +=1;
+    }
+  }
+    return Even;
+}
 void addToEach(int x[], int n, int delta);
 
 void removeVowels(char s[]);

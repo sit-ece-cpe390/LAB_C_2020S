@@ -16,9 +16,16 @@ Hritesh Manda
 Kevin Ward
 Corey Giannakas
 <<<<<<< HEAD
+Jacob Janosko
+=======
+<<<<<<< HEAD
 Zachary Fazal
 =======
 >>>>>>> ef118b605ce07d46b14c089b7b1d4832b2ae97d0
 Stephen Tan
+<<<<<<< HEAD
 >>>>>>> 3a81c558be7f223766200a6eebf0e2e3df855f50
 Princeton Nwosu
+=======
+Jacob Janokso
+>>>>>>> 5e830826e20ea02909798a79aa8212c09570c035

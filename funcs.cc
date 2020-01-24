@@ -27,7 +27,18 @@ uint64_t prod(uint32_t a, uint32_t b) {
 }
 uint32_t sumsq(uint32_t a, uint32_t b);
 uint32_t countPrimes(uint32_t a, uint32_t b);
-bool isPrime(uint32_t p);
+bool isPrime(uint32_t p)
+{
+    for(i = 2; i<=p/2;i++)
+      {
+	if(p%i == 0)
+	  {
+	    isPrime = false;
+	    break;
+	  }
+      }
+    return isPrime;
+}
 void swap(uint32_t& a, uint32_t& b);
 uint32_t gcd(uint32_t a, uint32_t b);
 uint32_t lcm(uint32_t a, uint32_t b);
@@ -86,9 +97,25 @@ double mean(int x[], int n){
   }
   return double(sum)/double(n);
 }
-int max(int x[], int n);
+int max(int x[], int n) {
+	int maxValue = 0;
+
+	for (int i = 0; i < n; i++) {
+		if ( x[i] > maxValue ) {
+			maxValue = x[i];
+		}
+	}
+
+	return maxValue;
+}
 int min(int x[], int n);
-double prod(int x[], int n);
+double prod(int x[], int n){
+  uint32_t product = 0;
+  for (int i = 0; i < n; i++){
+    product = product * [i];
+  }
+  return double(product);
+}
 int sum(int x[], int n);
 void demean(double x[], int n);
 void normalize(double x[], int n);

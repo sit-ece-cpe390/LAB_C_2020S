@@ -14,7 +14,26 @@ uint32_t sum(uint32_t a, uint32_t b) {
 uint64_t prod(uint32_t a, uint32_t b);
 uint32_t sumsq(uint32_t a, uint32_t b);
 uint32_t countPrimes(uint32_t a, uint32_t b);
-bool isPrime(uint32_t p);
+bool isPrime(uint32_t p)
+{
+  cout << "Input a number";
+  cin >> p;
+  uint32_t i = 0;
+  int truefalse = 0;
+    for(i = 2; i<=p/2;i++)
+      {
+	if(p%i == 0)
+	  {
+	    truefalse = 1;
+	    break;
+	  }
+      }
+  if (truefalse = 0)
+    cout << "True";
+  else
+    cout << "False";
+  return 0;
+}
 void swap(uint32_t& a, uint32_t& b);
 uint32_t gcd(uint32_t a, uint32_t b);
 uint32_t lcm(uint32_t a, uint32_t b);

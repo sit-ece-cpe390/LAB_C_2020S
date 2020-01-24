@@ -20,7 +20,11 @@ uint32_t sumsq(uint32_t a, uint32_t b);
 uint32_t countPrimes(uint32_t a, uint32_t b);
 bool isPrime(uint32_t p);
 void swap(uint32_t& a, uint32_t& b);
-uint32_t gcd(uint32_t a, uint32_t b);
+uint32_t gcd(uint32_t a, uint32_t b)
+{ if (b == 0)
+    return a;
+  return gcd(b, a % b);
+}
 uint32_t lcm(uint32_t a, uint32_t b);
 double fact(uint32_t n);
 uint64_t sum(uint32_t n);
@@ -81,7 +85,16 @@ int max(int x[], int n);
 int min(int x[], int n);
 double prod(int x[], int n);
 int sum(int x[], int n);
-void demean(double x[], int n);
+void demean(double x[], int n){
+double findMean(int x[], int n)
+  int sum = 0;
+ for (int i = 0; i < n; i++){
+   sum += x[i];
+ }
+   
+
+      
+  }
 void normalize(double x[], int n);
 void round(double x[], int n);
 void square(double x[], int n);

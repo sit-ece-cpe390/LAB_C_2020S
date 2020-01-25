@@ -82,7 +82,9 @@ public:
 	}
 };
 
-double dot(Vec3d v1, Vec3d v2);
+double dot(Vec3d v1, Vec3d v2){
+  return (v1x*v2x), (v1y*v2y), (v1z*v2z);
+}
 
 Vec3d cross(Vec3d v1, Vec3d v2);
 
@@ -129,7 +131,16 @@ uint32_t countEvens(const int x[], int n);
 void addToEach(int x[], int n, int delta);
 
 void removeVowels(char s[]);
-void reverse(char s[]);
+void reverse(char s[]){
+  char test[] = s[];
+  int j = 0
+  
+  for (int i = (sizeof(test)/sizeof(test[0])); i > 0; i--) {
+    s[j] = test[i];
+    j++;
+  }
+  
+}
 bool isPalindrome(const char s[]);
 uint32_t checksum(const char s[]);
 uint32_t myhash(const char s[]);

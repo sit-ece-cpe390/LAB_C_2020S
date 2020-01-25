@@ -133,7 +133,7 @@ void addToEach(int x[], int n, int delta);
 void removeVowels(char s[]);
 void reverse(char s[]){
   char test[] = s[];
-  int j = 0
+  int j = 0;
   
   for (int i = (sizeof(test)/sizeof(test[0])); i > 0; i--) {
     s[j] = test[i];

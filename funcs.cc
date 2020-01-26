@@ -26,7 +26,15 @@ uint64_t prod(uint32_t a, uint32_t b) {
 	return product;
 }
 uint32_t sumsq(uint32_t a, uint32_t b);
-uint32_t countPrimes(uint32_t a, uint32_t b);
+uint32_t countPrimes(uint32_t a, uint32_t b){
+    int numberOfPrimes = 0;
+    for(int i = a; i <= b; ++i) {
+        if (isPrime(i)){
+            ++numberOfPrimes;
+        }
+    }
+    return numberOfPrimes;
+}
 bool isPrime(uint32_t p)
 {
     for(i = 2; i<=p/2;i++)
@@ -118,7 +126,13 @@ double prod(int x[], int n){
   }
   return double(product);
 }
-int sum(int x[], int n);
+int sum(int x[], int n){
+    int sum = 0;
+    for(int i = 0; i < n; ++i){
+        sum += x[i];
+    }
+    return sum;
+}
 void demean(double x[], int n);
 void normalize(double x[], int n);
 void round(double x[], int n);

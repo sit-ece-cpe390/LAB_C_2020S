@@ -8,11 +8,8 @@ Johnny Intriago
 Daren Tay
 Paul Tziranis
 Julia Chung
-<<<<<<< HEAD
-=======
 Abhishek Kakar
 Hritesh Manda
 Kevin Ward
 Corey Giannakas
->>>>>>> ef118b605ce07d46b14c089b7b1d4832b2ae97d0
 Stephen Tan

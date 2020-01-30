@@ -7,6 +7,8 @@
 */
 #include <iostream>
 #include <cstdint>
+#include <cmath>
+#include <vector>
 using namespace std;
 uint64_t sum(uint32_t a, uint32_t b) {
   uint64_t sum = 0;
@@ -65,7 +67,10 @@ double diffsq(double a, double b);
 double mean(int a, int b);
 double mean(int a, int b, int c);
 bool pythagoreantriple(double a, double b);
-double trigIdentity(double x);
+double trigIdentity(double x)  // Julia Chung
+{
+  return sin(x)*sin(x)+cos(x)*cos(x);
+}
 /*
 	note: this function uses pass by reference. Compute the answer and assign
 	to x1 and x2 and the roots will be sent back to main and printed
@@ -155,6 +160,7 @@ double taylorSeriesSine(double x);
 double taylorSeriesCosine(double x);
 double taylorSeriesE(double x);
 
+vector<int> compact(int x[], int n, int a, int b); // Julia Chung
 
 void print(const double x[], int n) {
 	for (int i = 0; i < n; i++)
@@ -244,6 +250,13 @@ int main() {
 	cout << "arr prod=" << prod(arr2, 8) << '\n';
 	cout << "arr sum=" << sum(arr2, 8) << '\n';
 
+	cout << "arr compact=";
+	vector<int> compact_result = compact(arr2, 8, 3, 8);
+	for (int i=0; i < compact_result.size(); i++) {
+	  cout << compact_result[i] << " ";
+	}
+	cout << '\n';
+
 	double arr3[6] = {1, 2, 3, 4, 5, 6};
 	demean(arr3, sizeof(arr3)/sizeof(double));
 	print(arr3, 6);
@@ -306,3 +319,23 @@ int main() {
 	cout << myhash("hash a longer string") << '\n';
 
 }
+
+vector<int> compact(int x[], int n, int a, int b)  // Julia Chung
+{
+  vector<int> tmp; //array list = vector<type>
+  for(int i=0; i < n; i++) {
+    if (!(x[i] <= b && x[i] >= a))
+      tmp.push_back(x[i]);
+  }
+  return tmp;
+  // int *arr = new int[tmp.size()]; // <type> * = pointer
+
+  // for (int i=0; i < tmp.size(); i++) {
+  //   arr[i] = tmp[i];
+  // }
+  // return 
+  //  arr; // no * because we just want the memory location not what element is stored
+
+}
+
+  

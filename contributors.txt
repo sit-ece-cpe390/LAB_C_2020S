@@ -1,4 +1,3 @@
-Hanyi Zhang
 Matthew Martin
 Jayden Pereira
 Bradley O'Connell
@@ -11,3 +10,6 @@ Paul Tziranis
 Julia Chung
 Abhishek Kakar
 Hritesh Manda
+Kevin Ward
+Corey Giannakas
+Stephen Tan

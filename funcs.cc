@@ -39,23 +39,15 @@ uint32_t countPrimes(uint32_t a, uint32_t b){
 }
 bool isPrime(uint32_t p)
 {
-  uint32_t p = 0;
-  cout << "Input a number";
-  cin >> p;
-  int truefalse = 0;
     for(i = 2; i<=p/2;i++)
       {
 	if(p%i == 0)
 	  {
-	    truefalse = 1;
+	    isPrime = false;
 	    break;
 	  }
       }
-  if (truefalse = 0)
-    cout << "True";
-  else
-    cout << "False";
-  return 0;
+    return isPrime;
 }
 void swap(uint32_t& a, uint32_t& b);
 uint32_t gcd(uint32_t a, uint32_t b);
@@ -103,7 +95,9 @@ public:
 	}
 };
 
-double dot(Vec3d v1, Vec3d v2);
+double dot(Vec3d v1, Vec3d v2){
+  return (v1x*v2x), (v1y*v2y), (v1z*v2z);
+}
 
 Vec3d cross(Vec3d v1, Vec3d v2);
 
@@ -130,7 +124,13 @@ int max(int x[], int n) {
 	return maxValue;
 }
 int min(int x[], int n);
-double prod(int x[], int n);
+double prod(int x[], int n){
+  uint32_t product = 0;
+  for (int i = 0; i < n; i++){
+    product = product * [i];
+  }
+  return double(product);
+}
 int sum(int x[], int n){
     int sum = 0;
     for(int i = 0; i < n; ++i){
@@ -150,7 +150,16 @@ uint32_t countEvens(const int x[], int n);
 void addToEach(int x[], int n, int delta);
 
 void removeVowels(char s[]);
-void reverse(char s[]);
+void reverse(char s[]){
+  char test[] = s[];
+  int j = 0;
+  
+  for (int i = (sizeof(test)/sizeof(test[0])); i > 0; i--) {
+    s[j] = test[i];
+    j++;
+  }
+  
+}
 bool isPalindrome(const char s[]);
 uint32_t checksum(const char s[]);
 uint32_t myhash(const char s[]);

@@ -23,15 +23,15 @@ uint64_t prod(uint32_t a, uint32_t b) {
 	while (a <= b) {
 		product *= a;
 		a++;
-	} 
+	}
 
-        //Author: Jacob Janosko 
+        //Author: Jacob Janosko
         uint64_t z = 1;
         for (a; a <= b; a++){
 	  z *= a ;
         }
         return z;
-	  
+
 }
 uint32_t sumsq(uint32_t a, uint32_t b);
 uint32_t countPrimes(uint32_t a, uint32_t b){
@@ -92,7 +92,10 @@ double diffsq(double a, double b) {
   return diffsq;
 }
 
-double mean(int a, int b);
+double mean(int a,int b) {
+  double total = a + b;
+  return total / 2.0;
+}
 double mean(int a, int b, int c){
   int meanT =0;
   meanT = (a+b+c)/3;
@@ -182,7 +185,7 @@ int max(int x[], int n) {
 	}
 
 	return maxValue;
-	
+
         //Author: Jacob Janosko
 	  int MaxNumber = 0;
 
@@ -251,7 +254,16 @@ void square(double x[], int n){
 }
 void squareRoot(double x[], int n);
 uint32_t strip(double x[], uint32_t n, double a, double b);
-void reverse(int x[], int n);
+void reverse(int x[], int n) {
+  int tempArr[n];
+
+  for (int i = 0; i < n; i++) {
+    tempArr[n-1-i] = x[i];
+  }
+  for (int i = 0; i < n; i++) {
+    x[i] = tempArr[i];
+  }
+}
 uint32_t randomElement(const int x[], int n);
 uint32_t countEvens(const int x[],int n){
   uint32_t Even = 0;

@@ -27,22 +27,12 @@ uint64_t prod(uint32_t a, uint32_t b) {
 
 	return product;
 	========================
-<<<<<<< HEAD
           uint64_t z = 1;
 	  for (a; a <= b; a++){
 	    z *= a ;
 	  }
 	  return z;
-
-=======
-        //Author: Jacob Janosko 
-        uint64_t z = 1;
-        for (a; a <= b; a++){
-	  z *= a ;
-        }
-        return z;
 	  
->>>>>>> 67009e0fe74a53256b0b43b747d6d73b8e107074
 }
 uint32_t sumsq(uint32_t a, uint32_t b);
 uint32_t countPrimes(uint32_t a, uint32_t b){
@@ -54,19 +44,17 @@ uint32_t countPrimes(uint32_t a, uint32_t b){
     }
     return numberOfPrimes;
 }
-bool isPrime(uint32_t p) {
-  if ((p == 2) || (p == 1)) {
-    return true;
-  }
-  else if (p == 0) {
-    return false;
-  }
-  for(i = 2; i < p; i++) {
-    if(p % i == 0) {
-      return false;
-    }
-  }
-  return true;
+bool isPrime(uint32_t p)
+{
+    for(i = 2; i<=p/2;i++)
+      {
+	if(p%i == 0)
+	  {
+	    isPrime = false;
+	    break;
+	  }
+      }
+    return isPrime;
 }
 void swap(uint32_t& a, uint32_t& b);
 uint32_t gcd(uint32_t a, uint32_t b)
@@ -76,18 +64,9 @@ uint32_t gcd(uint32_t a, uint32_t b)
 }
 uint32_t lcm(uint32_t a, uint32_t b);
 double fact(uint32_t n);
-uint64_t sum(uint32_t n){
-    uint64_t sum = 0;
-    for(int i = 0; i <= n; ++i){
-        sum += i;
-    }
-    return sum;
-}
+uint64_t sum(uint32_t n);
 double hypot(double a, double b);
-double diffsq(double a, double b) {
-  double diffsq = (a*a) - (b*b);
-  return diffsq;
-}
+double diffsq(double a, double b);
 double mean(int a, int b);
 double mean(int a, int b, int c);
 bool pythagoreantriple(double a, double b);
@@ -144,7 +123,7 @@ Vec3d cross(Vec3d v1, Vec3d v2);
 {
 
     int v1[] = { x, y, z };
-    int v2[] = { x, y, z };
+    int v2[] = { x, y, z }; 
     int cross_P[n];
     cout << "Cross product:";
     crossProduct(v1, v2, cross_P);
@@ -173,17 +152,6 @@ int max(int x[], int n) {
 	}
 
 	return maxValue;
-	=================
-        //Author: Jacob Janosko
-	  int MaxNumber = 0;
-
-	  while(int i = 0 < n){
-	    if ( x[i] > MaxNumber)
-	      MaxNumber = x[i];
-	    i++;
-	  }
-
-	  return MaxNumber;
 }
 int min(int x[], int n);
 double prod(int x[], int n){
@@ -199,7 +167,7 @@ int sum(int x[], int n) {
     total += x[i];
   }
 
-  return total;
+  return sum;
 }
 
 void demean(double x[], int n){
@@ -208,9 +176,9 @@ double findMean(int x[], int n)
  for (int i = 0; i < n; i++){
    sum += x[i];
  }
+   
 
-
-
+      
   }
 int sum(int x[], int n){
     int sum = 0;
@@ -219,24 +187,10 @@ int sum(int x[], int n){
     }
     return sum;
 }
-void demean(double x[], int n) {
-int sum = 0;
-  for (int i = 0; i < n; i++) {
-    sum += x[i];
-  }
-  double mean = sum/n;
-  for (int j = 0; j < n; j++) {
-    x[j] -= mean;
-  }
-  return x[];
-}
+void demean(double x[], int n);
 void normalize(double x[], int n);
 void round(double x[], int n);
-void square(double x[], int n){
-    for (int i = 0; i < n; ++i) {
-        x[i] = x[i] * x[i];
-    }
-}
+void square(double x[], int n);
 void squareRoot(double x[], int n);
 uint32_t strip(double x[], uint32_t n, double a, double b);
 void reverse(int x[], int n);
@@ -277,12 +231,12 @@ void reverse(char s[]);
 void reverse(char s[]){
   char test[] = s[];
   int j = 0;
-
+  
   for (int i = (sizeof(test)/sizeof(test[0])); i > 0; i--) {
     s[j] = test[i];
     j++;
   }
-
+  
 }
 bool isPalindrome(const char s[]);
 uint32_t checksum(const char s[]);
@@ -394,7 +348,6 @@ int main() {
 	demean(arr3, sizeof(arr3)/sizeof(double));
 	print(arr3, 6);
 
-
 	double arr4[6] = {1, 2, 3, 4, 5, 6};
 	normalize(arr4, 6);
 	print(arr4, 6);
@@ -467,7 +420,9 @@ vector<int> compact(int x[], int n, int a, int b)  // Julia Chung
   // for (int i=0; i < tmp.size(); i++) {
   //   arr[i] = tmp[i];
   // }
-  // return
+  // return 
   //  arr; // no * because we just want the memory location not what element is stored
 
 }
+
+  

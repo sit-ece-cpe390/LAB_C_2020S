@@ -286,7 +286,13 @@ void reverse(int x[], int n) {
     x[i] = tempArr[i];
   }
 }
-uint32_t randomElement(const int x[], int n);
+uint32_t randomElement(const int x[], int n){
+  srand(rand());
+  int pos=0;
+  pos = rand()%n;
+
+  return pos;
+}
 uint32_t countEvens(const int x[],int n){
   uint32_t Even = 0;
   for(int i = 0; i < n; i++){

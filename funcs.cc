@@ -16,24 +16,7 @@ uint64_t sum(uint32_t a, uint32_t b) {
     sum+=i;
   }
   return sum;
-  ======================
- int c = 0;
-   int num = 0;
-   int sum = 0;
-   if (a < b){ 
-     num = a;
-     c = b;
-   }
-   else if (b < a){
-     num = b;
-     c = a;
-   }
-   for(sum = 0;num <= c; num++){
-     sum = sum + num;
-   }
-
-   cout << sum << endl;
-   >>>>>>>>>>>>>>>>>>>
+}
 
 uint64_t prod(uint32_t a, uint32_t b) {
 	uint64_t product = 1;
@@ -43,30 +26,9 @@ uint64_t prod(uint32_t a, uint32_t b) {
 		a++;
 	}
 
-<<<<<<< HEAD
+
 	return product;
-	========================
-<<<<<<< HEAD
-          uint64_t z = 1;
-	  for (a; a <= b; a++){
-	    z *= a ;
-	  }
-	  return z;
 
-=======
-=======
->>>>>>> dc8ad56f1375a7cec682d4653e4dd4814cd5a360
-        //Author: Jacob Janosko
-        uint64_t z = 1;
-        for (a; a <= b; a++){
-	  z *= a ;
-        }
-        return z;
-
-<<<<<<< HEAD
->>>>>>> 67009e0fe74a53256b0b43b747d6d73b8e107074
-=======
->>>>>>> dc8ad56f1375a7cec682d4653e4dd4814cd5a360
 }
 uint32_t sumsq(uint32_t a, uint32_t b){
 	uint32_t sumsq=0;
@@ -123,9 +85,9 @@ uint32_t lcm(uint32_t a, uint32_t b){
     lcm++;
   }
 double fact(uint32_t n);
-<<<<<<< HEAD
+
 uint64_t sum(uint32_t n);
-<<<<<<< HEAD
+
 double hypot(double a, double b)
 {
   int x=0;
@@ -143,13 +105,12 @@ double squareroot(double a) {
 	return sqrt(a);
 }
 
->>>>>>> d341b4a28ebefae6c44ce522c6631e85b2cdeb7e
 double diffsq(double a, double b);
-<<<<<<< HEAD
+
 double mean(int a, int b);
-<<<<<<< HEAD
+
 double mean(int a, int b, int c);
-<<<<<<< HEAD
+
 bool pythagoreantriple(double a, double b);
  double trigIdentity(double x){
     	double t = sin(x)*sin(x) + (cos(x))*cos(x);

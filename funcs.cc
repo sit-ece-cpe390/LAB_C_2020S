@@ -203,7 +203,38 @@ double trigIdentity(double x)  // Julia Chung
 	note: this function uses pass by reference. Compute the answer and assign
 	to x1 and x2 and the roots will be sent back to main and printed
 */
-void quadraticEquation(double a, double b, double c, double& x1, double& x2);
+void quadraticEquation() {
+    double a, b, c, x1, x2, discrim, real, imaginary;
+    cout << "Enter a: ";
+    cin >> a;
+    cout << "Enter b: ";
+    cin >>b;
+    cout << "Enter c: ";
+    cin >>c;
+    discrim = b*b - 4*a*c;
+    
+    if (discrim > 0) {
+        x1 = (-b + sqrt(discrim)) / (2*a);
+        x2 = (-b - sqrt(discrim)) / (2*a);
+        cout << "Real roots:" << endl;
+        cout << "x = " << x1 << endl;
+        cout << "x = " << x2 << endl;
+    }
+    
+    else if (discrim == 0) {
+        cout << "Root:" << endl;
+        x1 = (-b + sqrt(discrim)) / (2*a);
+        cout << "x1 = x2 =" << x1 << endl;
+    }
+    else {
+        real = -b/(2*a);
+        imaginary =sqrt(-discrim)/(2*a);
+        cout << "Roots are complex:"  << endl;
+        cout << "x1 = " << real << "+" << imaginary << "i" << endl;
+        cout << "x2 = " << real << "-" << imaginary << "i" << endl;
+    }
+    return 0;
+}
 
 double area(double x1, double y1, double x2, double y2, double x3, double y3);
 double area(double x1, double y1,

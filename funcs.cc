@@ -7,6 +7,8 @@
 */
 #include <iostream>
 #include <cstdint>
+#include <cmath>
+#include <vector>
 using namespace std;
 uint64_t sum(uint32_t a, uint32_t b) {
   uint64_t sum = 0;
@@ -26,7 +28,15 @@ uint64_t prod(uint32_t a, uint32_t b) {
 	return product;
 }
 uint32_t sumsq(uint32_t a, uint32_t b);
-uint32_t countPrimes(uint32_t a, uint32_t b);
+uint32_t countPrimes(uint32_t a, uint32_t b){
+    int numberOfPrimes = 0;
+    for(int i = a; i <= b; ++i) {
+        if (isPrime(i)){
+            ++numberOfPrimes;
+        }
+    }
+    return numberOfPrimes;
+}
 bool isPrime(uint32_t p)
 {
     for(i = 2; i<=p/2;i++)
@@ -53,7 +63,10 @@ double diffsq(double a, double b);
 double mean(int a, int b);
 double mean(int a, int b, int c);
 bool pythagoreantriple(double a, double b);
-double trigIdentity(double x);
+double trigIdentity(double x)  // Julia Chung
+{
+  return sin(x)*sin(x)+cos(x)*cos(x);
+}
 /*
 	note: this function uses pass by reference. Compute the answer and assign
 	to x1 and x2 and the roots will be sent back to main and printed
@@ -95,7 +108,9 @@ public:
 	}
 };
 
-double dot(Vec3d v1, Vec3d v2);
+double dot(Vec3d v1, Vec3d v2){
+  return (v1x*v2x), (v1y*v2y), (v1z*v2z);
+}
 
 Vec3d cross(Vec3d v1, Vec3d v2);
 {
@@ -139,6 +154,7 @@ double prod(int x[], int n){
   }
   return double(product);
 }
+<<<<<<< HEAD
 int sum(int x[], int n);
 void demean(double x[], int n){
 double findMean(int x[], int n)
@@ -150,6 +166,16 @@ double findMean(int x[], int n)
 
       
   }
+=======
+int sum(int x[], int n){
+    int sum = 0;
+    for(int i = 0; i < n; ++i){
+        sum += x[i];
+    }
+    return sum;
+}
+void demean(double x[], int n);
+>>>>>>> ad1ead1bf1591d9c5157e68962e420babb5b7931
 void normalize(double x[], int n);
 void round(double x[], int n);
 void square(double x[], int n);
@@ -169,6 +195,7 @@ uint32_t countEvens(const int x[],int n){
 void addToEach(int x[], int n, int delta);
 
 void removeVowels(char s[]);
+<<<<<<< HEAD
 {char str1[50], str2[50];
       int length = 0, count, a = 0;
       printf("\nEnter A String:\t");
@@ -190,6 +217,18 @@ void removeVowels(char s[]);
       return 0;
     }
 void reverse(char s[]);
+=======
+void reverse(char s[]){
+  char test[] = s[];
+  int j = 0;
+  
+  for (int i = (sizeof(test)/sizeof(test[0])); i > 0; i--) {
+    s[j] = test[i];
+    j++;
+  }
+  
+}
+>>>>>>> ad1ead1bf1591d9c5157e68962e420babb5b7931
 bool isPalindrome(const char s[]);
 uint32_t checksum(const char s[]);
 uint32_t myhash(const char s[]);
@@ -199,6 +238,7 @@ double taylorSeriesSine(double x);
 double taylorSeriesCosine(double x);
 double taylorSeriesE(double x);
 
+vector<int> compact(int x[], int n, int a, int b); // Julia Chung
 
 void print(const double x[], int n) {
 	for (int i = 0; i < n; i++)
@@ -288,6 +328,13 @@ int main() {
 	cout << "arr prod=" << prod(arr2, 8) << '\n';
 	cout << "arr sum=" << sum(arr2, 8) << '\n';
 
+	cout << "arr compact=";
+	vector<int> compact_result = compact(arr2, 8, 3, 8);
+	for (int i=0; i < compact_result.size(); i++) {
+	  cout << compact_result[i] << " ";
+	}
+	cout << '\n';
+
 	double arr3[6] = {1, 2, 3, 4, 5, 6};
 	demean(arr3, sizeof(arr3)/sizeof(double));
 	print(arr3, 6);
@@ -350,3 +397,23 @@ int main() {
 	cout << myhash("hash a longer string") << '\n';
 
 }
+
+vector<int> compact(int x[], int n, int a, int b)  // Julia Chung
+{
+  vector<int> tmp; //array list = vector<type>
+  for(int i=0; i < n; i++) {
+    if (!(x[i] <= b && x[i] >= a))
+      tmp.push_back(x[i]);
+  }
+  return tmp;
+  // int *arr = new int[tmp.size()]; // <type> * = pointer
+
+  // for (int i=0; i < tmp.size(); i++) {
+  //   arr[i] = tmp[i];
+  // }
+  // return 
+  //  arr; // no * because we just want the memory location not what element is stored
+
+}
+
+  

@@ -101,6 +101,14 @@ uint32_t lcm(uint32_t a, uint32_t b){
 double fact(uint32_t n);
 <<<<<<< HEAD
 uint64_t sum(uint32_t n);
+<<<<<<< HEAD
+double hypot(double a, double b)
+{
+  int x=0;
+  x=sqrt(pow(a,2)+pow(b,2));
+  return x;
+}
+=======
 
 // Tyler Wright
 double hypot(double a, double b) {
@@ -111,9 +119,25 @@ double squareroot(double a) {
 	return sqrt(a);
 }
 
+>>>>>>> d341b4a28ebefae6c44ce522c6631e85b2cdeb7e
 double diffsq(double a, double b);
 <<<<<<< HEAD
 double mean(int a, int b);
+<<<<<<< HEAD
+double mean(int a, int b, int c);
+bool pythagoreantriple(double a, double b)
+{
+   if (floor(sqrt(a*a+b*b))==sqrt(a*a+b*b))
+    {
+      return true;
+    }
+  else
+    {
+      return false;
+    }
+}
+double trigIdentity(double x);
+=======
 double mean(int a, int b, int c){
   double ave = (a + b + c) / 3;
   return ave;
@@ -148,6 +172,7 @@ double trigIdentity(double x)  // Julia Chung
 {
   return sin(x)*sin(x)+cos(x)*cos(x);
 }
+>>>>>>> d341b4a28ebefae6c44ce522c6631e85b2cdeb7e
 /*
 	note: this function uses pass by reference. Compute the answer and assign
 	to x1 and x2 and the roots will be sent back to main and printed
@@ -266,7 +291,17 @@ double prod(int x[], int n){
   }
   return double(product);
 }
+<<<<<<< HEAD
+int sum(int x[], int n){
+    int sum = 0;
+    for(int i = 0; i < n; ++i){
+        sum += x[i];
+    }
+    return sum;
+}
+=======
 
+>>>>>>> d341b4a28ebefae6c44ce522c6631e85b2cdeb7e
 void demean(double x[], int n){
 double findMean(int x[], int n)
   int sum = 0;
@@ -276,6 +311,24 @@ double findMean(int x[], int n)
 
 
 
+<<<<<<< HEAD
+  }
+void normalize(double x[], int n)
+{
+  for(int x=0; x<n; x++)
+    {
+      if(p[x]<0)
+	{
+	  p[x]=p[x]/(p[x]-1);
+	}
+      if(p[x]<0)
+	{
+	  p[x]=p[x]/(p[x]-1);
+	}
+    }
+}          	
+void round(double x[], int n);
+=======
   }
 int sum(int x[], int n){
     int sum = 0;
@@ -322,6 +375,7 @@ void round(double x[], int n){
   return x;
 >>>>>>> 246f87e9e0d84e2888c419f8757e909aaa69bc13
 }
+>>>>>>> d341b4a28ebefae6c44ce522c6631e85b2cdeb7e
 void square(double x[], int n);
 =======
 void round(double x[], int n);

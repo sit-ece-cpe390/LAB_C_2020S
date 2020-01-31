@@ -8,6 +8,14 @@ Johnny Intriago
 Daren Tay
 Paul Tziranis
 Julia Chung
+<<<<<<< HEAD
+<<<<<<< HEAD
+Sutton Dole
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d341b4a28ebefae6c44ce522c6631e85b2cdeb7e
 Abhishek Kakar
 Hritesh Manda
 Kevin Ward
@@ -22,7 +30,11 @@ Princeton Nwosu
 Jacob Janokso
 <<<<<<< HEAD
 >>>>>>> 5e830826e20ea02909798a79aa8212c09570c035
+<<<<<<< HEAD
+>>>>>>> 3cce8f8611b2c6cedaf53572ffe87b2701686049
+=======
 =======
 Sutton Dole
 Mingyao Tang
 >>>>>>> 40b718a63f8c3aa378552831c98450a957e326ab
+>>>>>>> d341b4a28ebefae6c44ce522c6631e85b2cdeb7e

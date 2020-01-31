@@ -68,7 +68,16 @@ uint32_t gcd(uint32_t a, uint32_t b)
 uint32_t lcm(uint32_t a, uint32_t b);
 double fact(uint32_t n);
 uint64_t sum(uint32_t n);
-double hypot(double a, double b);
+
+// Tyler Wright
+double hypot(double a, double b) {
+	return sqrt(a*a + b*b);
+}
+
+double squareroot(double a) {
+	return sqrt(a);
+}
+
 double diffsq(double a, double b);
 double mean(int a, int b);
 double mean(int a, int b, int c);
@@ -201,6 +210,7 @@ int sum(int x[], int n){
     }
     return sum;
 }
+
 void demean(double x[], int n);
 void normalize(double x[], int n);
 void round(double x[], int n);

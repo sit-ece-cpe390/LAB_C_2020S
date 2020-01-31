@@ -124,7 +124,15 @@ int max(int x[], int n) {
 
 	return maxValue;
 }
-int min(int x[], int n);
+int min(int x[], int n);{
+	int minimum= INT_MAX;
+	for (int i=0; i<n; i++){
+	if (x[i]<minimum){
+	minimum =x[i];
+	}
+	}
+	return minimum;
+}
 double prod(int x[], int n);
 int sum(int x[], int n){
     int sum = 0;

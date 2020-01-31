@@ -67,7 +67,13 @@ uint32_t gcd(uint32_t a, uint32_t b)
 }
 uint32_t lcm(uint32_t a, uint32_t b);
 double fact(uint32_t n);
-uint64_t sum(uint32_t n);
+uint64_t sum(uint32_t n){
+    uint64_t sum = 0;
+    for(int i = 0; i <= n; ++i){
+        sum += i;
+    }
+    return sum;
+}
 double hypot(double a, double b);
 double diffsq(double a, double b);
 double mean(int a, int b);
@@ -204,7 +210,11 @@ int sum(int x[], int n){
 void demean(double x[], int n);
 void normalize(double x[], int n);
 void round(double x[], int n);
-void square(double x[], int n);
+void square(double x[], int n){
+    for (int i = 0; i < n; ++i) {
+        x[i] = x[i] * x[i];
+    }
+}
 void squareRoot(double x[], int n);
 uint32_t strip(double x[], uint32_t n, double a, double b);
 void reverse(int x[], int n);

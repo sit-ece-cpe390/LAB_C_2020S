@@ -337,14 +337,6 @@ vector<int> compact(int x[], int n, int a, int b)  // Julia Chung
       tmp.push_back(x[i]);
   }
   return tmp;
-  // int *arr = new int[tmp.size()]; // <type> * = pointer
-
-  // for (int i=0; i < tmp.size(); i++) {
-  //   arr[i] = tmp[i];
-  // }
-  // return 
-  //  arr; // no * because we just want the memory location not what element is stored
-
 }
 
   

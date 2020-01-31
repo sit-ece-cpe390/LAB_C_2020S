@@ -85,8 +85,7 @@ uint32_t gcd(uint32_t a, uint32_t b)
     return a;
   return gcd(b, a % b);
 }
-uint32_t lcm(uint32_t a, uint32_t b);
-int main(){
+uint32_t lcm(uint32_t a, uint32_t b){
   int a = uint32_t, b=uint32_t, lcm;
   if(a>b)
     lcm = a;
@@ -99,8 +98,6 @@ int main(){
     }
     lcm++;
   }
-  return 0;
-}
 double fact(uint32_t n);
 <<<<<<< HEAD
 uint64_t sum(uint32_t n);

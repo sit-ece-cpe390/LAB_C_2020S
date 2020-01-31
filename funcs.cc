@@ -45,17 +45,19 @@ uint32_t countPrimes(uint32_t a, uint32_t b){
     }
     return numberOfPrimes;
 }
-bool isPrime(uint32_t p)
-{
-    for(i = 2; i<=p/2;i++)
-      {
-	if(p%i == 0)
-	  {
-	    isPrime = false;
-	    break;
-	  }
-      }
-    return isPrime;
+bool isPrime(uint32_t p) {
+  if ((p == 2) || (p == 1)) {
+    return true;
+  }
+  else if (p == 0) {
+    return false;
+  }
+  for(i = 2; i < p; i++) {
+    if(p % i == 0) {
+      return false;
+    }
+  }
+  return true;
 }
 void swap(uint32_t& a, uint32_t& b);
 uint32_t gcd(uint32_t a, uint32_t b)
@@ -179,7 +181,7 @@ int sum(int x[], int n) {
     total += x[i];
   }
 
-  return sum;
+  return total;
 }
 
 void demean(double x[], int n){

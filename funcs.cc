@@ -91,10 +91,30 @@ uint32_t gcd(uint32_t a, uint32_t b)
     return a;
   return gcd(b, a % b);
 }
-uint32_t lcm(uint32_t a, uint32_t b);
+uint32_t lcm(uint32_t a, uint32_t b){
+  int a = uint32_t, b=uint32_t, lcm;
+  if(a>b)
+    lcm = a;
+  else
+    lcm = b;
+  while(1){
+    if( 1cm%a==0 && 1 lcm%b==0){
+      cout << "The LCM of "<<a<<" and "<<b<<" is "<<lcm;
+      break;
+    }
+    lcm++;
+  }
 double fact(uint32_t n);
 <<<<<<< HEAD
 uint64_t sum(uint32_t n);
+<<<<<<< HEAD
+double hypot(double a, double b)
+{
+  int x=0;
+  x=sqrt(pow(a,2)+pow(b,2));
+  return x;
+}
+=======
 
 // Tyler Wright
 double hypot(double a, double b) {
@@ -105,7 +125,29 @@ double squareroot(double a) {
 	return sqrt(a);
 }
 
+>>>>>>> d341b4a28ebefae6c44ce522c6631e85b2cdeb7e
 double diffsq(double a, double b);
+<<<<<<< HEAD
+double mean(int a, int b);
+<<<<<<< HEAD
+double mean(int a, int b, int c);
+bool pythagoreantriple(double a, double b)
+{
+   if (floor(sqrt(a*a+b*b))==sqrt(a*a+b*b))
+    {
+      return true;
+    }
+  else
+    {
+      return false;
+    }
+}
+double trigIdentity(double x);
+=======
+double mean(int a, int b, int c){
+  double ave = (a + b + c) / 3;
+  return ave;
+=======
 
 uint64_t sum(uint32_t n){
     uint64_t sum = 0;
@@ -129,12 +171,14 @@ double mean(int a, int b, int c){
   meanT = (a+b+c)/3;
 
   return meanT;
+>>>>>>> 40b718a63f8c3aa378552831c98450a957e326ab
 }
 bool pythagoreantriple(double a, double b);
 double trigIdentity(double x)  // Julia Chung
 {
   return sin(x)*sin(x)+cos(x)*cos(x);
 }
+>>>>>>> d341b4a28ebefae6c44ce522c6631e85b2cdeb7e
 /*
 	note: this function uses pass by reference. Compute the answer and assign
 	to x1 and x2 and the roots will be sent back to main and printed
@@ -170,7 +214,17 @@ double perimeter(double x1, double y1, double x2, double y2, double x3, double y
 double perimeter(double x1, double y1,
 								 double x2, double y2,
 								 double x3, double y3,
-								 double x4, double y4);
+		                                                 double x4, double y4){
+  double A = sqrt((double)(x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+  double B = sqrt((double)(x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2));
+  double C = sqrt((double)(x4 - x3) * (x4 - x3) + (y4 - y3) * (y4 - y3));
+  double D = sqrt((double)(x1 - x4) * (x1 - x4) + (y1 - y4) * (y1 - y4));
+
+  double s = 0;
+  s = A + B + C + D;
+  return s;
+
+}
 
 double dot(double v1x, double v1y, double v1z,
 					 double v2x, double v2y, double v2z);
@@ -247,7 +301,17 @@ int min(int x[], int n);{
 }
 double prod(int x[], int n);
 =======
-int min(int x[], int n);
+int min(int x[], int n) {
+	int res = INT_MAX;
+	for (int i  = 0; i<n; i++){
+                   if(x[i]<res){
+		       res = x[i];
+		   }
+	
+	}
+	return res;
+}
+
 double prod(int x[], int n){
   uint32_t product = 0;
   for (int i = 0; i < n; i++){
@@ -255,7 +319,17 @@ double prod(int x[], int n){
   }
   return double(product);
 }
+<<<<<<< HEAD
+int sum(int x[], int n){
+    int sum = 0;
+    for(int i = 0; i < n; ++i){
+        sum += x[i];
+    }
+    return sum;
+}
+=======
 
+>>>>>>> d341b4a28ebefae6c44ce522c6631e85b2cdeb7e
 void demean(double x[], int n){
 double findMean(int x[], int n)
   int sum = 0;
@@ -265,6 +339,24 @@ double findMean(int x[], int n)
 
 
 
+<<<<<<< HEAD
+  }
+void normalize(double x[], int n)
+{
+  for(int x=0; x<n; x++)
+    {
+      if(p[x]<0)
+	{
+	  p[x]=p[x]/(p[x]-1);
+	}
+      if(p[x]<0)
+	{
+	  p[x]=p[x]/(p[x]-1);
+	}
+    }
+}          	
+void round(double x[], int n);
+=======
   }
 >>>>>>> 40b718a63f8c3aa378552831c98450a957e326ab
 int sum(int x[], int n){
@@ -289,12 +381,39 @@ int sum = 0;
 
 
 void normalize(double x[], int n);
+<<<<<<< HEAD
+void round(double x[], int n){
+  for (int i = 0; 1 < n; ++i)
+    {
+      int a = x[i];
+      double b = x[i] - a;
+      if (b<.5) {
+	x[i]=a;
+      }
+      else{
+	x[i] = a +1;
+      }
+    }
+=======
+<<<<<<< HEAD
+void round(double x[], int n){
+  double x[n];
+  for(int i = 0; i < n; i++){
+    x[i] = round(x[i]);
+  }
+  return x;
+>>>>>>> 246f87e9e0d84e2888c419f8757e909aaa69bc13
+}
+>>>>>>> d341b4a28ebefae6c44ce522c6631e85b2cdeb7e
+void square(double x[], int n);
+=======
 void round(double x[], int n);
 void square(double x[], int n){
     for (int i = 0; i < n; ++i) {
         x[i] = x[i] * x[i];
     }
 }
+>>>>>>> 40b718a63f8c3aa378552831c98450a957e326ab
 void squareRoot(double x[], int n);
 uint32_t strip(double x[], uint32_t n, double a, double b);
 void reverse(int x[], int n) {

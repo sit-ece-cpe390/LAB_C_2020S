@@ -12,8 +12,18 @@ Mingyao Tang
 Paul Tziranis
 Julia Chung
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 5f522e04401aaf9bc340d76c4dd4db607ced4811
 =======
+=======
+<<<<<<< HEAD
+Sutton Dole
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d341b4a28ebefae6c44ce522c6631e85b2cdeb7e
+>>>>>>> 132690151225b8dd7e1d37f05b35bb7f46d46440
 Abhishek Kakar
 Hritesh Manda
 <<<<<<< HEAD
@@ -24,7 +34,19 @@ Corey Giannakas
 Jacob Janosko
 Zachary Fazal
 Stephen Tan
+<<<<<<< HEAD
+>>>>>>> 3a81c558be7f223766200a6eebf0e2e3df855f50
+Princeton Nwosu
+=======
 Jacob Janokso
+<<<<<<< HEAD
+>>>>>>> 5e830826e20ea02909798a79aa8212c09570c035
+<<<<<<< HEAD
+>>>>>>> 3cce8f8611b2c6cedaf53572ffe87b2701686049
+=======
+=======
 Sutton Dole
 >>>>>>> 40b718a63f8c3aa378552831c98450a957e326ab
 Mingyao Tang
+>>>>>>> 40b718a63f8c3aa378552831c98450a957e326ab
+>>>>>>> d341b4a28ebefae6c44ce522c6631e85b2cdeb7e

@@ -35,13 +35,13 @@ uint64_t prod(uint32_t a, uint32_t b) {
 	  return z;
 
 =======
-        //Author: Jacob Janosko 
+        //Author: Jacob Janosko
         uint64_t z = 1;
         for (a; a <= b; a++){
 	  z *= a ;
         }
         return z;
-	  
+
 >>>>>>> 67009e0fe74a53256b0b43b747d6d73b8e107074
 }
 uint32_t sumsq(uint32_t a, uint32_t b);
@@ -68,7 +68,12 @@ bool isPrime(uint32_t p) {
   }
   return true;
 }
-void swap(uint32_t& a, uint32_t& b);
+void swap(uint32_t& a, uint32_t& b){
+  uint32_t c = a;
+  a = b;
+  b = c;
+}
+
 uint32_t gcd(uint32_t a, uint32_t b)
 { if (b == 0)
     return a;

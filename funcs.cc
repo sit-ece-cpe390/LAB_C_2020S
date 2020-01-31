@@ -163,14 +163,6 @@ double prod(int x[], int n){
   }
   return double(product);
 }
-int sum(int x[], int n) {
-  int total = 0;
-  for (i = 0, i < n; i++) {
-    total += x[i];
-  }
-
-  return total;
-}
 
 void demean(double x[], int n){
 double findMean(int x[], int n)

@@ -27,12 +27,11 @@ uint64_t prod(uint32_t a, uint32_t b) {
 
 	return product;
 	========================
-        //Author: Jacob Janosko 
-        uint64_t z = 1;
-        for (a; a <= b; a++){
-	  z *= a ;
-        }
-        return z;
+          uint64_t z = 1;
+	  for (a; a <= b; a++){
+	    z *= a ;
+	  }
+	  return z;
 	  
 }
 uint32_t sumsq(uint32_t a, uint32_t b);
@@ -45,19 +44,17 @@ uint32_t countPrimes(uint32_t a, uint32_t b){
     }
     return numberOfPrimes;
 }
-bool isPrime(uint32_t p) {
-  if ((p == 2) || (p == 1)) {
-    return true;
-  }
-  else if (p == 0) {
-    return false;
-  }
-  for(i = 2; i < p; i++) {
-    if(p % i == 0) {
-      return false;
-    }
-  }
-  return true;
+bool isPrime(uint32_t p)
+{
+    for(i = 2; i<=p/2;i++)
+      {
+	if(p%i == 0)
+	  {
+	    isPrime = false;
+	    break;
+	  }
+      }
+    return isPrime;
 }
 void swap(uint32_t& a, uint32_t& b);
 uint32_t gcd(uint32_t a, uint32_t b)
@@ -67,18 +64,9 @@ uint32_t gcd(uint32_t a, uint32_t b)
 }
 uint32_t lcm(uint32_t a, uint32_t b);
 double fact(uint32_t n);
-uint64_t sum(uint32_t n){
-    uint64_t sum = 0;
-    for(int i = 0; i <= n; ++i){
-        sum += i;
-    }
-    return sum;
-}
+uint64_t sum(uint32_t n);
 double hypot(double a, double b);
-double diffsq(double a, double b) {
-  double diffsq = (a*a) - (b*b);
-  return diffsq;
-}
+double diffsq(double a, double b);
 double mean(int a, int b);
 double mean(int a, int b, int c);
 bool pythagoreantriple(double a, double b);
@@ -164,17 +152,6 @@ int max(int x[], int n) {
 	}
 
 	return maxValue;
-	=================
-        //Author: Jacob Janosko
-	  int MaxNumber = 0;
-
-	  while(int i = 0 < n){
-	    if ( x[i] > MaxNumber)
-	      MaxNumber = x[i];
-	    i++;
-	  }
-
-	  return MaxNumber;
 }
 int min(int x[], int n);
 double prod(int x[], int n){
@@ -190,7 +167,7 @@ int sum(int x[], int n) {
     total += x[i];
   }
 
-  return total;
+  return sum;
 }
 
 void demean(double x[], int n){
@@ -213,11 +190,7 @@ int sum(int x[], int n){
 void demean(double x[], int n);
 void normalize(double x[], int n);
 void round(double x[], int n);
-void square(double x[], int n){
-    for (int i = 0; i < n; ++i) {
-        x[i] = x[i] * x[i];
-    }
-}
+void square(double x[], int n);
 void squareRoot(double x[], int n);
 uint32_t strip(double x[], uint32_t n, double a, double b);
 void reverse(int x[], int n);

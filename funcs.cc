@@ -24,6 +24,13 @@ uint64_t prod(uint32_t a, uint32_t b) {
 	}
 
 	return product;
+	========================
+          uint64_t z = 1;
+	  for (a; a <= b; a++){
+	    z *= a ;
+	  }
+	  return z;
+	  
 }
 uint32_t sumsq(uint32_t a, uint32_t b);
 uint32_t countPrimes(uint32_t a, uint32_t b);
@@ -51,7 +58,10 @@ uint64_t sum(uint32_t n);
 double hypot(double a, double b);
 double diffsq(double a, double b);
 double mean(int a, int b);
-double mean(int a, int b, int c);
+double mean(int a, int b, int c){
+  double ave = (a + b + c) / 3;
+  return ave;
+}
 bool pythagoreantriple(double a, double b);
 double trigIdentity(double x);
 /*
@@ -79,7 +89,17 @@ double perimeter(double x1, double y1, double x2, double y2, double x3, double y
 double perimeter(double x1, double y1,
 								 double x2, double y2,
 								 double x3, double y3,
-								 double x4, double y4);
+		                                                 double x4, double y4){
+  double A = sqrt((double)(x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+  double B = sqrt((double)(x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2));
+  double C = sqrt((double)(x4 - x3) * (x4 - x3) + (y4 - y3) * (y4 - y3));
+  double D = sqrt((double)(x1 - x4) * (x1 - x4) + (y1 - y4) * (y1 - y4));
+
+  double s = 0;
+  s = A + B + C + D;
+  return s;
+
+}
 
 double dot(double v1x, double v1y, double v1z,
 					 double v2x, double v2y, double v2z);
@@ -151,7 +171,13 @@ double findMean(int x[], int n)
       
   }
 void normalize(double x[], int n);
-void round(double x[], int n);
+void round(double x[], int n){
+  double x[n];
+  for(int i = 0; i < n; i++){
+    x[i] = round(x[i]);
+  }
+  return x;
+}
 void square(double x[], int n);
 void squareRoot(double x[], int n);
 uint32_t strip(double x[], uint32_t n, double a, double b);

@@ -26,6 +26,13 @@ uint64_t prod(uint32_t a, uint32_t b) {
 	}
 
 	return product;
+	========================
+          uint64_t z = 1;
+	  for (a; a <= b; a++){
+	    z *= a ;
+	  }
+	  return z;
+	  
 }
 uint32_t sumsq(uint32_t a, uint32_t b);
 uint32_t countPrimes(uint32_t a, uint32_t b){
@@ -50,7 +57,11 @@ bool isPrime(uint32_t p)
     return isPrime;
 }
 void swap(uint32_t& a, uint32_t& b);
-uint32_t gcd(uint32_t a, uint32_t b);
+uint32_t gcd(uint32_t a, uint32_t b)
+{ if (b == 0)
+    return a;
+  return gcd(b, a % b);
+}
 uint32_t lcm(uint32_t a, uint32_t b);
 double fact(uint32_t n);
 uint64_t sum(uint32_t n);
@@ -71,10 +82,29 @@ void quadraticEquation(double a, double b, double c, double& x1, double& x2);
 
 double area(double x1, double y1, double x2, double y2, double x3, double y3);
 double area(double x1, double y1,
-						double x2, double y2,
+					        double x2, double y2,
 						double x3, double y3,
-						double x4, double y4);
-double perimeter(double x1, double y1, double x2, double y2, double x3, double y3);
+	    double x4, double y4); //Julia Chung
+
+{
+  double side1 = sqrt((double)(x2-x1)-(y2-y1));
+  double side2 = sqrt((double)(x3-x2)-(y3-y2));
+  double side3 = sqrt((double)(x4-x3)-(y4-y3));
+  double side4 = sqrt((double)(x4-x1)-(y4-y1));
+
+  double areaQuad = side1*side2*side3*side4;
+  return areaQuad;
+}
+double perimeter(double x1, double y1, double x2, double y2, double x3, double y3) {
+	float A = sqrt((double)(x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+	float B = sqrt((double)(x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3));
+	float C = sqrt((double)(x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3));
+
+	float s = 0;
+	s = A + B + C;
+	return s;
+}
+
 
 double perimeter(double x1, double y1,
 								 double x2, double y2,
@@ -100,7 +130,17 @@ double dot(Vec3d v1, Vec3d v2){
 }
 
 Vec3d cross(Vec3d v1, Vec3d v2);
+{
 
+    int v1[] = { x, y, z };
+    int v2[] = { x, y, z }; 
+    int cross_P[n];
+    cout << "Cross product:";
+    crossProduct(v1, v2, cross_P);
+    for (int i = 0; i < n; i++)
+        cout << cross_P[i] << " ";
+    return 0;
+}
 double grav(double m1, Vec3d v1, double m2, Vec3d v2);
 
 
@@ -131,6 +171,19 @@ double prod(int x[], int n){
   }
   return double(product);
 }
+<<<<<<< HEAD
+int sum(int x[], int n);
+void demean(double x[], int n){
+double findMean(int x[], int n)
+  int sum = 0;
+ for (int i = 0; i < n; i++){
+   sum += x[i];
+ }
+   
+
+      
+  }
+=======
 int sum(int x[], int n){
     int sum = 0;
     for(int i = 0; i < n; ++i){
@@ -139,6 +192,7 @@ int sum(int x[], int n){
     return sum;
 }
 void demean(double x[], int n);
+>>>>>>> ad1ead1bf1591d9c5157e68962e420babb5b7931
 void normalize(double x[], int n);
 void round(double x[], int n);
 void square(double x[], int n);
@@ -146,10 +200,41 @@ void squareRoot(double x[], int n);
 uint32_t strip(double x[], uint32_t n, double a, double b);
 void reverse(int x[], int n);
 uint32_t randomElement(const int x[], int n);
-uint32_t countEvens(const int x[], int n);
+uint32_t countEvens(const int x[],int n){
+  uint32_t Even = 0;
+  for(int i = 0; i < n; i++){
+    if((x[i]%2)==0){
+      Even +=1;
+    }
+  }
+    return Even;
+}
 void addToEach(int x[], int n, int delta);
 
 void removeVowels(char s[]);
+<<<<<<< HEAD
+{char str1[50], str2[50];
+      int length = 0, count, a = 0;
+      printf("\nEnter A String:\t");
+      scanf("%s", str1);
+      length = strlen(str1);
+      for(count = 0; count <= length; count++)
+      {
+            if((str1[count] == 97 || str1[count] == 101 || str1[count] == 105 || str1[count] == 111 || str1[count] == 117) ||(str1[count] == 65 || str1[count] == 69 || str1[count] == 73 || str1[count] == 79 || str1[count] == 85 ))
+            {
+                  str1[count] = ' ';
+            }
+            else
+            {
+                  str2[a++] = str1[count];
+            }
+      }
+      str2[a] = '\0';
+      printf("\nString After Removing Vowels:\t%s\n\n", str2);
+      return 0;
+    }
+void reverse(char s[]);
+=======
 void reverse(char s[]){
   char test[] = s[];
   int j = 0;
@@ -160,10 +245,17 @@ void reverse(char s[]){
   }
   
 }
+>>>>>>> ad1ead1bf1591d9c5157e68962e420babb5b7931
 bool isPalindrome(const char s[]);
 uint32_t checksum(const char s[]);
 uint32_t myhash(const char s[]);
-void lowercase(char s[]);
+void lowercase(char s[]) //Julia Chung
+{
+  for (int i=0; i < s[].size; i++) {
+    char temp = s[i];
+    s[i] = (char)tolower(temp);
+  }
+}
 
 double taylorSeriesSine(double x);
 double taylorSeriesCosine(double x);

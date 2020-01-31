@@ -173,8 +173,15 @@ double prod(int x[], int n){
   }
   return double(product);
 }
-<<<<<<< HEAD
-int sum(int x[], int n);
+int sum(int x[], int n) {
+  int total = 0;
+  for (i = 0, i < n; i++) {
+    total += x[i];
+  }
+
+  return sum;
+}
+
 void demean(double x[], int n){
 double findMean(int x[], int n)
   int sum = 0;
@@ -185,7 +192,6 @@ double findMean(int x[], int n)
 
       
   }
-=======
 int sum(int x[], int n){
     int sum = 0;
     for(int i = 0; i < n; ++i){
@@ -194,7 +200,6 @@ int sum(int x[], int n){
     return sum;
 }
 void demean(double x[], int n);
->>>>>>> ad1ead1bf1591d9c5157e68962e420babb5b7931
 void normalize(double x[], int n);
 void round(double x[], int n);
 void square(double x[], int n);
@@ -214,7 +219,6 @@ uint32_t countEvens(const int x[],int n){
 void addToEach(int x[], int n, int delta);
 
 void removeVowels(char s[]);
-<<<<<<< HEAD
 {char str1[50], str2[50];
       int length = 0, count, a = 0;
       printf("\nEnter A String:\t");
@@ -236,7 +240,6 @@ void removeVowels(char s[]);
       return 0;
     }
 void reverse(char s[]);
-=======
 void reverse(char s[]){
   char test[] = s[];
   int j = 0;
@@ -247,7 +250,6 @@ void reverse(char s[]){
   }
   
 }
->>>>>>> ad1ead1bf1591d9c5157e68962e420babb5b7931
 bool isPalindrome(const char s[]);
 uint32_t checksum(const char s[]);
 uint32_t myhash(const char s[]);

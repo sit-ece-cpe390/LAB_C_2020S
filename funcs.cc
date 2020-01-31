@@ -27,11 +27,12 @@ uint64_t prod(uint32_t a, uint32_t b) {
 
 	return product;
 	========================
-          uint64_t z = 1;
-	  for (a; a <= b; a++){
-	    z *= a ;
-	  }
-	  return z;
+        //Author: Jacob Janosko 
+        uint64_t z = 1;
+        for (a; a <= b; a++){
+	  z *= a ;
+        }
+        return z;
 	  
 }
 uint32_t sumsq(uint32_t a, uint32_t b);
@@ -152,6 +153,17 @@ int max(int x[], int n) {
 	}
 
 	return maxValue;
+	=================
+        //Author: Jacob Janosko
+	  int MaxNumber = 0;
+
+	  while(int i = 0 < n){
+	    if ( x[i] > MaxNumber)
+	      MaxNumber = x[i];
+	    i++;
+	  }
+
+	  return MaxNumber;
 }
 int min(int x[], int n);
 double prod(int x[], int n){

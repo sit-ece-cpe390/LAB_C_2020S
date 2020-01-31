@@ -46,6 +46,21 @@ uint32_t gcd(uint32_t a, uint32_t b)
   return gcd(b, a % b);
 }
 uint32_t lcm(uint32_t a, uint32_t b);
+int main(){
+  int a = uint32_t, b=uint32_t, lcm;
+  if(a>b)
+    lcm = a;
+  else
+    lcm = b;
+  while(1){
+    if( 1cm%a==0 && 1 lcm%b==0){
+      cout << "The LCM of "<<a<<" and "<<b<<" is "<<lcm;
+      break;
+    }
+    lcm++;
+  }
+  return 0;
+}
 double fact(uint32_t n);
 uint64_t sum(uint32_t n);
 double hypot(double a, double b);
@@ -151,7 +166,19 @@ double findMean(int x[], int n)
       
   }
 void normalize(double x[], int n);
-void round(double x[], int n);
+void round(double x[], int n){
+  for (int i = 0; 1 < n; ++i)
+    {
+      int a = x[i];
+      double b = x[i] - a;
+      if (b<.5) {
+	x[i]=a;
+      }
+      else{
+	x[i] = a +1;
+      }
+    }
+}
 void square(double x[], int n);
 void squareRoot(double x[], int n);
 uint32_t strip(double x[], uint32_t n, double a, double b);

@@ -16,7 +16,25 @@ uint64_t sum(uint32_t a, uint32_t b) {
     sum+=i;
   }
   return sum;
-}
+  ======================
+ int c = 0;
+   int num = 0;
+   int sum = 0;
+   if (a < b){ 
+     num = a;
+     c = b;
+   }
+   else if (b < a){
+     num = b;
+     c = a;
+   }
+   for(sum = 0;num <= c; num++){
+     sum = sum + num;
+   }
+
+   cout << sum << endl;
+   >>>>>>>>>>>>>>>>>>>
+
 uint64_t prod(uint32_t a, uint32_t b) {
 	uint64_t product = 1;
 
@@ -131,6 +149,13 @@ double diffsq(double a, double b);
 double mean(int a, int b);
 <<<<<<< HEAD
 double mean(int a, int b, int c);
+<<<<<<< HEAD
+bool pythagoreantriple(double a, double b);
+ double trigIdentity(double x){
+    	double t = sin(x)*sin(x) + (cos(x))*cos(x);
+	return t;
+ }
+=======
 bool pythagoreantriple(double a, double b)
 {
    if (floor(sqrt(a*a+b*b))==sqrt(a*a+b*b))
@@ -179,11 +204,43 @@ double trigIdentity(double x)  // Julia Chung
   return sin(x)*sin(x)+cos(x)*cos(x);
 }
 >>>>>>> d341b4a28ebefae6c44ce522c6631e85b2cdeb7e
+>>>>>>> 132690151225b8dd7e1d37f05b35bb7f46d46440
 /*
 	note: this function uses pass by reference. Compute the answer and assign
 	to x1 and x2 and the roots will be sent back to main and printed
 */
-void quadraticEquation(double a, double b, double c, double& x1, double& x2);
+void quadraticEquation() {
+    double a, b, c, x1, x2, discrim, real, imaginary;
+    cout << "Enter a: ";
+    cin >> a;
+    cout << "Enter b: ";
+    cin >>b;
+    cout << "Enter c: ";
+    cin >>c;
+    discrim = b*b - 4*a*c;
+    
+    if (discrim > 0) {
+        x1 = (-b + sqrt(discrim)) / (2*a);
+        x2 = (-b - sqrt(discrim)) / (2*a);
+        cout << "Real roots:" << endl;
+        cout << "x = " << x1 << endl;
+        cout << "x = " << x2 << endl;
+    }
+    
+    else if (discrim == 0) {
+        cout << "Root:" << endl;
+        x1 = (-b + sqrt(discrim)) / (2*a);
+        cout << "x1 = x2 =" << x1 << endl;
+    }
+    else {
+        real = -b/(2*a);
+        imaginary =sqrt(-discrim)/(2*a);
+        cout << "Roots are complex:"  << endl;
+        cout << "x1 = " << real << "+" << imaginary << "i" << endl;
+        cout << "x2 = " << real << "-" << imaginary << "i" << endl;
+    }
+    return 0;
+}
 
 double area(double x1, double y1, double x2, double y2, double x3, double y3);
 double area(double x1, double y1,
@@ -442,7 +499,11 @@ uint32_t countEvens(const int x[],int n){
   }
     return Even;
 }
-void addToEach(int x[], int n, int delta);
+ void addToEach(int x[], int n, int delta){
+	for (int i = 0; i < n; i++) {
+		x[i] += delta;
+	}
+ }
 
 void removeVowels(char s[]);
 {char str1[50], str2[50];

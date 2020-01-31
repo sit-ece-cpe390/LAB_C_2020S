@@ -78,7 +78,10 @@ double diffsq(double a, double b);
 double mean(int a, int b);
 double mean(int a, int b, int c);
 bool pythagoreantriple(double a, double b);
-double trigIdentity(double x);
+ double trigIdentity(double x){
+    	double t = sin(x)*sin(x) + (cos(x))*cos(x);
+	return t;
+ }
 /*
 	note: this function uses pass by reference. Compute the answer and assign
 	to x1 and x2 and the roots will be sent back to main and printed
@@ -191,7 +194,11 @@ uint32_t countEvens(const int x[],int n){
   }
     return Even;
 }
-void addToEach(int x[], int n, int delta);
+ void addToEach(int x[], int n, int delta){
+	for (int i = 0; i < n; i++) {
+		x[i] += delta;
+	}
+ }
 
 void removeVowels(char s[]);
 {char str1[50], str2[50];

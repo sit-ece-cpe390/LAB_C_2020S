@@ -32,7 +32,7 @@ uint64_t prod(uint32_t a, uint32_t b) {
 	    z *= a ;
 	  }
 	  return z;
-	  
+
 }
 uint32_t sumsq(uint32_t a, uint32_t b);
 uint32_t countPrimes(uint32_t a, uint32_t b){
@@ -123,7 +123,7 @@ Vec3d cross(Vec3d v1, Vec3d v2);
 {
 
     int v1[] = { x, y, z };
-    int v2[] = { x, y, z }; 
+    int v2[] = { x, y, z };
     int cross_P[n];
     cout << "Cross product:";
     crossProduct(v1, v2, cross_P);
@@ -176,9 +176,9 @@ double findMean(int x[], int n)
  for (int i = 0; i < n; i++){
    sum += x[i];
  }
-   
 
-      
+
+
   }
 int sum(int x[], int n){
     int sum = 0;
@@ -187,7 +187,17 @@ int sum(int x[], int n){
     }
     return sum;
 }
-void demean(double x[], int n);
+void demean(double x[], int n) {
+int sum = 0;
+  for (int i = 0; i < n; i++) {
+    sum += x[i];
+  }
+  double mean = sum/n;
+  for (int j = 0; j < n; j++) {
+    x[j] -= mean;
+  }
+  return x[];
+}
 void normalize(double x[], int n);
 void round(double x[], int n);
 void square(double x[], int n);
@@ -231,12 +241,12 @@ void reverse(char s[]);
 void reverse(char s[]){
   char test[] = s[];
   int j = 0;
-  
+
   for (int i = (sizeof(test)/sizeof(test[0])); i > 0; i--) {
     s[j] = test[i];
     j++;
   }
-  
+
 }
 bool isPalindrome(const char s[]);
 uint32_t checksum(const char s[]);
@@ -348,6 +358,7 @@ int main() {
 	demean(arr3, sizeof(arr3)/sizeof(double));
 	print(arr3, 6);
 
+
 	double arr4[6] = {1, 2, 3, 4, 5, 6};
 	normalize(arr4, 6);
 	print(arr4, 6);
@@ -420,9 +431,7 @@ vector<int> compact(int x[], int n, int a, int b)  // Julia Chung
   // for (int i=0; i < tmp.size(); i++) {
   //   arr[i] = tmp[i];
   // }
-  // return 
+  // return
   //  arr; // no * because we just want the memory location not what element is stored
 
 }
-
-  

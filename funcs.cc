@@ -89,7 +89,12 @@ double diffsq(double a, double b) {
   return diffsq;
 }
 double mean(int a, int b);
-double mean(int a, int b, int c);
+double mean(int a, int b, int c){
+  int meanT =0;
+  meanT = (a+b+c)/3;
+
+  return meanT;
+}
 bool pythagoreantriple(double a, double b);
 double trigIdentity(double x)  // Julia Chung
 {

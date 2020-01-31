@@ -137,9 +137,19 @@ void quadraticEquation(double a, double b, double c, double& x1, double& x2);
 
 double area(double x1, double y1, double x2, double y2, double x3, double y3);
 double area(double x1, double y1,
-						double x2, double y2,
+					        double x2, double y2,
 						double x3, double y3,
-						double x4, double y4);
+	    double x4, double y4); //Julia Chung
+
+{
+  double side1 = sqrt((double)(x2-x1)-(y2-y1));
+  double side2 = sqrt((double)(x3-x2)-(y3-y2));
+  double side3 = sqrt((double)(x4-x3)-(y4-y3));
+  double side4 = sqrt((double)(x4-x1)-(y4-y1));
+
+  double areaQuad = side1*side2*side3*side4;
+  return areaQuad;
+}
 double perimeter(double x1, double y1, double x2, double y2, double x3, double y3) {
 	float A = sqrt((double)(x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 	float B = sqrt((double)(x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3));
@@ -226,14 +236,6 @@ double prod(int x[], int n){
     product = product * [i];
   }
   return double(product);
-}
-int sum(int x[], int n) {
-  int total = 0;
-  for (i = 0, i < n; i++) {
-    total += x[i];
-  }
-
-  return total;
 }
 
 void demean(double x[], int n){
@@ -339,7 +341,13 @@ void reverse(char s[]){
 bool isPalindrome(const char s[]);
 uint32_t checksum(const char s[]);
 uint32_t myhash(const char s[]);
-void lowercase(char s[]);
+void lowercase(char s[]) //Julia Chung
+{
+  for (int i=0; i < s[].size; i++) {
+    char temp = s[i];
+    s[i] = (char)tolower(temp);
+  }
+}
 
 double taylorSeriesSine(double x);
 double taylorSeriesCosine(double x);
@@ -514,6 +522,8 @@ vector<int> compact(int x[], int n, int a, int b)  // Julia Chung
       tmp.push_back(x[i]);
   }
   return tmp;
+<<<<<<< HEAD
+=======
   // int *arr = new int[tmp.size()]; // <type> * = pointer
 
   // for (int i=0; i < tmp.size(); i++) {
@@ -522,4 +532,5 @@ vector<int> compact(int x[], int n, int a, int b)  // Julia Chung
   // return
   //  arr; // no * because we just want the memory location not what element is stored
 
+>>>>>>> 58af41ffc04c35265a6c30c144c8cd292ee86801
 }

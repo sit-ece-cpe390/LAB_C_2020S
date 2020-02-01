@@ -370,13 +370,6 @@ void normalize(double x[], int n)
 void round(double x[], int n){
 
   }
-int sum(int x[], int n){
-    int sum = 0;
-    for(int i = 0; i < n; ++i){
-        sum += x[i];
-    }
-    return sum;
-}
 
 void demean(double x[], int n) {
 int sum = 0;

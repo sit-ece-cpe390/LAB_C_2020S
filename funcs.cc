@@ -86,8 +86,6 @@ uint32_t lcm(uint32_t a, uint32_t b){
   }
 double fact(uint32_t n);
 
-uint64_t sum(uint32_t n);
-
 double hypot(double a, double b)
 {
   int x=0;
@@ -416,8 +414,6 @@ void round(double x[], int n){
   return x;
 
 }
-
-void square(double x[], int n);
 
 void round(double x[], int n);
 void square(double x[], int n){

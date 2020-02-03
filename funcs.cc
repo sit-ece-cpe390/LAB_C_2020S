@@ -482,6 +482,26 @@ void reverse(char s[]){
 
 }
 bool isPalindrome(const char s[]);
+	char string1[20];
+    int i, length;
+    int flag = 0;
+    
+    cout << "Enter a string: "; cin >> string1;
+    
+    length = strlen(string1);
+    
+    for(i=0;i < length ;i++){
+        if(string1[i] != string1[length-i-1]){
+            flag = 1;
+            break;
+   }
+}
+    
+    if (flag) {
+        cout << string1 << " is not a palindrome" << endl; 
+    }    
+    else {
+        cout << string1 << " is a palindrome" << endl; 
 uint32_t checksum(const char s[]);
 uint32_t myhash(const char s[]);
 void lowercase(char s[]) //Julia Chung

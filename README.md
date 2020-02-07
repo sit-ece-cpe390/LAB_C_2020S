@@ -8,3 +8,7 @@ LAB 3
 arduino blink:
 
 https://www.youtube.com/watch?v=EFp6oE26__k
+
+press button
+
+https://www.youtube.com/watch?v=VPGRqML_v0w&t=130s

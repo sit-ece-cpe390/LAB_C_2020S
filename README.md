@@ -5,6 +5,10 @@ https://docs.google.com/presentation/d/1sYXHU0bNwfbWJ5TbWethPO1zv9Phnv8oV-55Wyw3
 
 LAB 3
 
+start:
+
+https://www.arduino.cc/en/Guide/ArduinoUno
+
 arduino blink:
 
 https://www.youtube.com/watch?v=EFp6oE26__k

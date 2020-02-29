@@ -2,18 +2,18 @@
 	.global _Z2a2j
 
 _Z2a1j:
-	mov 	r1, #0
-	sub	r0, #2
-x:
+	cmp	r0, #0
+	ble	out1
+	mov	r1, #0
+x:	add	r1, #1
 	cmp	r1, r0
-	add	r1, #1
-	bne	x
-	bx	lr
+	blt	x
+out1:	bx	lr
 
 _Z2a2j:
-	mov	r1, r0
-y:
-	sub	r1, #1
 	cmp	r0, #0
-	bne	y
-	bx	lr
+	ble	out2
+y:	sub	r0, #1
+	cmp	r0, #0
+	bgt	y
+out2:	bx	lr

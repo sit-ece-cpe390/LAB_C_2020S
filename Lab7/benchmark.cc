@@ -67,8 +67,12 @@ uint64_t b6(uint32_t x[], uint32_t n) {
  */
 uint64_t b7(uint32_t x[], uint32_t n) {
 	uint64_t sum = 0;
-
-
+	for(int i = 0; i < n; i+=2){
+	  sum += x[i];
+	}
+	for(int i = 1; i < n; i+=2){
+	  sum += x[i];
+	}
 
 
   return sum;
@@ -81,8 +85,12 @@ uint64_t b7(uint32_t x[], uint32_t n) {
  */
 uint64_t b8(uint32_t x[], uint32_t n) {
 	uint64_t sum = 0;
-
-  
+	for(int i = n-1; i > 0; i-=2){
+	  sum += x[i];
+	}
+	for(int i = n-2; i >= 0; i-=2){
+	  sum += x[i];
+	}
 
   return sum;
 }
@@ -98,10 +106,18 @@ uint64_t b8(uint32_t x[], uint32_t n) {
  */
 uint64_t b9(uint32_t x[], uint32_t n) {
   uint64_t sum = 0;
-
-
-
-  
+  for(int i = 0; i < n; i+=4){
+    sum += x[i];
+  }
+  for(int i = 1; i < n; i+=4){
+    sum += x[i];
+  }
+  for(int i = 2; i < n; i+=4){
+    sum =+ x[i];
+  }
+  for(int i = 3; i < n; i+=4){
+    sum += x[i];
+  }
 	return sum;
 }
 
@@ -147,8 +163,10 @@ uint64_t b13(uint32_t x[], uint32_t n) {
 	compare the speed of sequential access to the speed of writing out of order
 */
 uint64_t b14(uint32_t x[], uint32_t n) {
-
-  
+  for(int i = 0; i < n; i+=2)
+    x[i] = 0;
+  for(int i = 1; i < n; i+=2)
+    x[i] = 0;
 	return 0;
 }
 
@@ -286,9 +304,9 @@ double fact(uint32_t n) { /* this is a comment*/
 
 //Write a recursive factorial function
 double fact2(int n) {
-	if ( )
-		return ???;
-	return ???;
+	if (n > 1)
+	  return n * fact2(n-1);
+	return 1;
 }
 
 #endif

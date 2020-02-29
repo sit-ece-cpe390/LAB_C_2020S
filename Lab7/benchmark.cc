@@ -68,7 +68,12 @@ uint64_t b6(uint32_t x[], uint32_t n) {
  */
 uint64_t b7(uint32_t x[], uint32_t n) {
 	uint64_t sum = 0;
-
+	for(int i=0; i<n; i+=2){
+	  sum=sum+x[i];
+	}
+	for(int j=1; j<n; j+=2){
+	  sum=sum+x[j];
+	}
 
 
 
@@ -84,7 +89,12 @@ uint64_t b7(uint32_t x[], uint32_t n) {
 uint64_t b8(uint32_t x[], uint32_t n) {
 	uint64_t sum = 0;
 
-  
+	for(int i = n-1; i>=0; i-=2){
+	  sum += x[i];
+	}
+	for(int j = n-2; j>=0; j-=2){
+	  sum += x[j];
+	}
 
   return sum;
 }
@@ -100,8 +110,12 @@ uint64_t b8(uint32_t x[], uint32_t n) {
  */
 uint64_t b9(uint32_t x[], uint32_t n) {
   uint64_t sum = 0;
+  for(int j = 0; j < 4; j++){
 
-
+    for(int i = j; i < n; i+=4){
+      sum += x[i];
+    }
+  }
 
   
 	return sum;
@@ -149,7 +163,12 @@ uint64_t b13(uint32_t x[], uint32_t n) {
 	compare the speed of sequential access to the speed of writing out of order
 */
 uint64_t b14(uint32_t x[], uint32_t n) {
-
+  for(int i = 0; i < n; i+=2){
+    x[i] = 0;
+  }
+  for(int j = 0; j < n; j+=2){
+    x[j] = 0;
+  }
   
 	return 0;
 }
@@ -167,13 +186,13 @@ uint32_t countPrimes1(uint32_t n) {
 	return count;
 }
 
-#if 0
+#if 1
 // skip 2 for speed. Handle 2 as a special case, then all primes are odd
 // go up to the square root of the number
 int32_t countPrimes2(uint32_t n) {
 	uint32_t count = 1; // special case for 2, the only even prime
-  //TODO:	for (uint32_t i = 3; i <= n; i ???) {
-  //TODO:		for (uint32_t j = 3; j ??? ; j ???)
+  	for (uint32_t i = 3; i <= n; i++) {
+  		for (uint32_t j = 3; j < i; j++)
 			if (i % j == 0)
 				goto notPrime;
 		count++;
@@ -237,14 +256,14 @@ float b17(float x[], uint32_t n) {
 	return prod;
 }
 
-#if 0
+#if 1
 // benchmark sum of floating point reciprocals
 // check your answer! SHOULD NOT BE 1.0!!!
 // 1/1 + 1/2 + 1/3 + ... + 1/n
 float b18(uint32_t n) {
 	float sum = 0;
-	for (int i = 0; i < n; i++)
-		sum += ???
+	for (int i = 1; i <= n; i++)
+	  sum += 1.0/i;
 	return sum;
 }
 
@@ -253,8 +272,8 @@ float b18(uint32_t n) {
 // sqrt(1) + sqrt(2) + ... + sqrt(n)
 float b19(uint32_t n) {
 	float sum = 0;
-	for (int i = 0; i < n; i++)
-		sum += ???
+	for (int i = 0; i <= n; i++)
+	  sum += sqrt(i*1.0);
 	return sum;
 }
 
@@ -263,8 +282,8 @@ float b19(uint32_t n) {
 // 1/1 + 1/2 + 1/3 + ... + 1/n
 double b20(uint32_t n) {
 	double sum = 0;
-	for (int i = 0; i < n; i++)
-		sum += ???
+	for (int i = 0; i <= n; i++)
+	  sum += 1.0/i;
 	return sum;
 }
 
@@ -273,24 +292,24 @@ double b20(uint32_t n) {
 // sqrt(1) + sqrt(2) + ... + sqrt(n)
 double b21(uint32_t n) {
 	double sum = 0;
-	for (int i = 0; i < n; i++)
-		sum += ???
+	for (int i = 0; i <= n; i++)
+	  sum += sqrt(i*1.0);
 	return sum;
 }
 
 // There are bugs in my fact function. Fix them and benchmark
 double fact(uint32_t n) { /* this is a comment*/
-	double prod;
-	for (int i = 0; i < n; i++)
+	double prod = 1;
+	for (int i = 1; i < n; i++)
 		prod *= i;
 	return prod;
 }
 
 //Write a recursive factorial function
 double fact2(int n) {
-	if ( )
-		return ???;
-	return ???;
+	if (n > 1)
+	  return n * fact2(n - 1);
+	return 1;
 }
 
 #endif
@@ -487,8 +506,8 @@ void benchmark7(const char msg[], Func f, uint32_t n) {
 
 int main() {
 	const uint32_t n = 100000000; // 100 million
-	//  benchmark1("a1", a1, n);
-	//	benchmark1("a2", a2, n);
+	  benchmark1("a1", a1, n);
+	        benchmark1("a2", a2, n);
 
 	benchmark1("b1", b1, n);
 	benchmark1("b2", b2, n); // compare b1 and b2. What can you conclude?

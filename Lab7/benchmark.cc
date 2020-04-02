@@ -64,16 +64,10 @@ uint64_t b6(uint32_t x[], uint32_t n) {
   write code to compute sum but not in sequential order
      read x[0], x[2], ... x[n-1]
      then read x[1], x[3], ... x[n-1]
-
  */
 uint64_t b7(uint32_t x[], uint32_t n) {
 	uint64_t sum = 0;
-	for(int i=0; i<n; i+=2){
-	  sum=sum+x[i];
-	}
-	for(int j=1; j<n; j+=2){
-	  sum=sum+x[j];
-	}
+
 
 
 
@@ -84,17 +78,11 @@ uint64_t b7(uint32_t x[], uint32_t n) {
   write code to compute sum backwards, not in sequential order
      compute x[n-1] + x[n-3] + x[n-5] + ...
      +   x[n-2] + x[n-4] + ...
-
  */
 uint64_t b8(uint32_t x[], uint32_t n) {
 	uint64_t sum = 0;
 
-	for(int i = n-1; i>=0; i-=2){
-	  sum += x[i];
-	}
-	for(int j = n-2; j>=0; j-=2){
-	  sum += x[j];
-	}
+  
 
   return sum;
 }
@@ -110,12 +98,8 @@ uint64_t b8(uint32_t x[], uint32_t n) {
  */
 uint64_t b9(uint32_t x[], uint32_t n) {
   uint64_t sum = 0;
-  for(int j = 0; j < 4; j++){
 
-    for(int i = j; i < n; i+=4){
-      sum += x[i];
-    }
-  }
+
 
   
 	return sum;
@@ -163,12 +147,7 @@ uint64_t b13(uint32_t x[], uint32_t n) {
 	compare the speed of sequential access to the speed of writing out of order
 */
 uint64_t b14(uint32_t x[], uint32_t n) {
-  for(int i = 0; i < n; i+=2){
-    x[i] = 0;
-  }
-  for(int j = 0; j < n; j+=2){
-    x[j] = 0;
-  }
+
   
 	return 0;
 }
@@ -186,13 +165,13 @@ uint32_t countPrimes1(uint32_t n) {
 	return count;
 }
 
-#if 1
+#if 0
 // skip 2 for speed. Handle 2 as a special case, then all primes are odd
 // go up to the square root of the number
 int32_t countPrimes2(uint32_t n) {
 	uint32_t count = 1; // special case for 2, the only even prime
-  	for (uint32_t i = 3; i <= n; i++) {
-  		for (uint32_t j = 3; j < i; j++)
+  //TODO:	for (uint32_t i = 3; i <= n; i ???) {
+  //TODO:		for (uint32_t j = 3; j ??? ; j ???)
 			if (i % j == 0)
 				goto notPrime;
 		count++;
@@ -256,14 +235,14 @@ float b17(float x[], uint32_t n) {
 	return prod;
 }
 
-#if 1
+#if 0
 // benchmark sum of floating point reciprocals
 // check your answer! SHOULD NOT BE 1.0!!!
 // 1/1 + 1/2 + 1/3 + ... + 1/n
 float b18(uint32_t n) {
 	float sum = 0;
-	for (int i = 1; i <= n; i++)
-	  sum += 1.0/i;
+	for (int i = 0; i < n; i++)
+		sum += ???
 	return sum;
 }
 
@@ -272,8 +251,8 @@ float b18(uint32_t n) {
 // sqrt(1) + sqrt(2) + ... + sqrt(n)
 float b19(uint32_t n) {
 	float sum = 0;
-	for (int i = 0; i <= n; i++)
-	  sum += sqrt(i*1.0);
+	for (int i = 0; i < n; i++)
+		sum += ???
 	return sum;
 }
 
@@ -282,8 +261,8 @@ float b19(uint32_t n) {
 // 1/1 + 1/2 + 1/3 + ... + 1/n
 double b20(uint32_t n) {
 	double sum = 0;
-	for (int i = 0; i <= n; i++)
-	  sum += 1.0/i;
+	for (int i = 0; i < n; i++)
+		sum += ???
 	return sum;
 }
 
@@ -292,24 +271,24 @@ double b20(uint32_t n) {
 // sqrt(1) + sqrt(2) + ... + sqrt(n)
 double b21(uint32_t n) {
 	double sum = 0;
-	for (int i = 0; i <= n; i++)
-	  sum += sqrt(i*1.0);
+	for (int i = 0; i < n; i++)
+		sum += ???
 	return sum;
 }
 
 // There are bugs in my fact function. Fix them and benchmark
 double fact(uint32_t n) { /* this is a comment*/
-	double prod = 1;
-	for (int i = 1; i < n; i++)
+	double prod;
+	for (int i = 0; i < n; i++)
 		prod *= i;
 	return prod;
 }
 
 //Write a recursive factorial function
 double fact2(int n) {
-	if (n > 1)
-	  return n * fact2(n - 1);
-	return 1;
+	if ( )
+		return ???;
+	return ???;
 }
 
 #endif
@@ -319,9 +298,6 @@ double fact2(int n) {
 
 /*
 	This is matrix multiplication for a matrix of size 10x10
-
-
-
     3  2  1        1  0  2      1   4   0
     1  0  -1   *   -1 1  -2 =   1
     2  1  1        0  2  1
@@ -341,17 +317,13 @@ void matmult(float ans[10][10], float a[10][10], float b[10][10]) {
 	Instead, write the code to index using the rule: a[i][k] = a[i*n+k]
 	This is what the compiler actually does for 2d matrices when it knows the size
 	of n in advance
-
 int x[10][20];
 x[i][j]= 99;
-
         j
   5  6  7  9
   1  2  3  4
 i 9  1  x  -1                m[i*n+j]
   1  0  2  -2
-
-
  */
 void matmult2(float ans[], float a[], float b[], uint32_t n) {
 	for (uint32_t i = 0; i < n; i++) 
@@ -397,22 +369,62 @@ void matmult4(float ans[], float a[], float b[], uint32_t n) {
 }
 #endif
 
+constexpr double PI = 3.14159265358979;
+/*
+	Second part, added March 20, 2020
+*/
+
+/* Compute the product of all these terms. Look at the assembly language. Can you come up with a more efficient way to get the same answer? Benchmark the original and your better version.
+*/
+double deg2rad(uint32_t n) {
+	const double x = 0.001;
+	double y = 1;
+	for (uint32_t i = 0; i < n; i++) {
+		y = y * x * PI / 180;
+	}
+	return y;
+}
+
+/* 
+	 The force due to gravity is:
+	 F = G*m1*m2 / (r*r)
+	 The acceleration of mass 1 is
+	 a =  F / m1
+*/
+double grav(uint32_t n) {
+	constexpr double G =  6.6742E-11; // universal gravitational constant
+	double x = 0; // one dimensional problem. Start at x = 0
+	double v = 0; // velocity = 0 to start
+	double r = 1.5e12; // distance apart
+	const double m1 = 5.972e24;      // earth mass
+	const double m2 = 7.34767309e22; // moon mass
+	constexpr double dt = 0.1; // 0.1 second timestep
+	for (uint32_t i = 0; i < n; i++) {
+		double F = G * m1 * m2 / (r*r);
+		double a = F / m1;
+		x = x + v * dt + 0.5*a * dt * dt;
+		v = v + a * dt;
+	}
+	return x;
+}
+
+
+
+
 
 /*
 	benchmarking a few instructions almost never makes sense
-
 	ldr r0, [r1]
 	add r0, #4
   ...
-
-	what do you do about pipelining?
-	
-
+	Q: what do you do about pipelining?
 	in a modern CPU, benchmarking is HARD
+	A: measure what you want in bulk and take the average value for a
+	large number of trials. Recognize that it may be different.
  */
 template<typename Func>
 void benchmark1(const char msg[], Func f, uint32_t n) {
-	for (uint32_t trials = 0; trials < 10; trials++) {
+	for (uint32_t trials = 0; trials < 5; trials++) {
 		clock_t t0 = clock();
 		uint64_t res = f(n);
 		clock_t t1 = clock();
@@ -425,7 +437,7 @@ void benchmark2(const char msg[], Func f, uint32_t n) {
 	uint32_t* p = new uint32_t[n]; // allocate a big chunk of memory
 	for (int i =  0; i < n; i++)
 		p[i] = 0;
-	for (uint32_t trials = 0; trials < 10; trials++) {
+	for (uint32_t trials = 0; trials < 5; trials++) {
 		clock_t t0 = clock();
 		uint64_t res = f(p, n); // give it to the function to play with
 		clock_t t1 = clock();
@@ -440,7 +452,7 @@ void benchmark3(const char msg[], Func f, uint32_t n) {
   float* p = new float[n];
   for (int i = 0; i < n; i++)
     p[i] = 0;
-	for (uint32_t trials = 0; trials < 10; trials++) {
+	for (uint32_t trials = 0; trials < 5; trials++) {
 		clock_t t0 = clock();
 		float res = f(p, n); // give it to the function to play with
 		clock_t t1 = clock();
@@ -455,7 +467,7 @@ void benchmark4(const char msg[], Func f, uint32_t n) {
   double* p = new double[n];
   for (int i = 0; i < n; i++)
     p[i] = 0;
-	for (uint32_t trials = 0; trials < 10; trials++) {
+	for (uint32_t trials = 0; trials < 5; trials++) {
 		clock_t t0 = clock();
 		double res = f(p, n); // give it to the function to play with
 		clock_t t1 = clock();
@@ -467,7 +479,7 @@ void benchmark4(const char msg[], Func f, uint32_t n) {
 // integer parameter returning float
 template<typename Func>
 void benchmark5(const char msg[], Func f, uint32_t n) {
-	for (uint32_t trials = 0; trials < 10; trials++) {
+	for (uint32_t trials = 0; trials < 5; trials++) {
 		clock_t t0 = clock();
 		float res = f(n); // give it to the function to play with
 		clock_t t1 = clock();
@@ -478,7 +490,7 @@ void benchmark5(const char msg[], Func f, uint32_t n) {
 // integer parameter returning double
 template<typename Func>
 void benchmark6(const char msg[], Func f, uint32_t n) {
-	for (uint32_t trials = 0; trials < 10; trials++) {
+	for (uint32_t trials = 0; trials < 5; trials++) {
 		clock_t t0 = clock();
 		double res = f(n); // give it to the function to play with
 		clock_t t1 = clock();
@@ -496,7 +508,7 @@ void benchmark7(const char msg[], Func f, uint32_t n) {
   for (int i = 0; i < n*n; i++)
     b[i] = 0;
   float* c = new float[n*n];
-	for (uint32_t trials = 0; trials < 10; trials++) {
+	for (uint32_t trials = 0; trials < 5; trials++) {
 		clock_t t0 = clock();
 		f(c, a, b, n); // give it to the function to play with
 		clock_t t1 = clock();
@@ -506,8 +518,8 @@ void benchmark7(const char msg[], Func f, uint32_t n) {
 
 int main() {
 	const uint32_t n = 100000000; // 100 million
-	  benchmark1("a1", a1, n);
-	        benchmark1("a2", a2, n);
+	//  benchmark1("a1", a1, n);
+	//	benchmark1("a2", a2, n);
 
 	benchmark1("b1", b1, n);
 	benchmark1("b2", b2, n); // compare b1 and b2. What can you conclude?
@@ -553,4 +565,7 @@ int main() {
   //  benchmark7("matmult3", matmult3, 256);
   //  benchmark7("matmult4", matmult4, 256);
 
+	benchmark6("deg2rad", deg2rad, n);
+	benchmark6("grav", grav, n);
+	
 }

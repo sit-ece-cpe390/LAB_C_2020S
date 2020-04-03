@@ -11,10 +11,10 @@ using namespace std;
 void f();
 
 // write this in assembler! count from 0 to n-1
-uint32_t a1(uint32_t n);
+//uint32_t a1(uint32_t n);
 
 // write this in assembler! count from n down to 0
-uint32_t a2(uint32_t n);
+//uint32_t a2(uint32_t n);
 
 
 

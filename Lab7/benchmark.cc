@@ -11,10 +11,10 @@ using namespace std;
 void f();
 
 // write this in assembler! count from 0 to n-1
-//uint32_t a1(uint32_t n);
+uint32_t a1(uint32_t n);
 
 // write this in assembler! count from n down to 0
-//uint32_t a2(uint32_t n);
+uint32_t a2(uint32_t n);
 
 
 
@@ -518,8 +518,8 @@ void benchmark7(const char msg[], Func f, uint32_t n) {
 
 int main() {
 	const uint32_t n = 100000000; // 100 million
-	//  benchmark1("a1", a1, n);
-	//	benchmark1("a2", a2, n);
+        benchmark1("a1", a1, n);
+	benchmark1("a2", a2, n);
 
 	benchmark1("b1", b1, n);
 	benchmark1("b2", b2, n); // compare b1 and b2. What can you conclude?

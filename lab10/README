@@ -1,0 +1,7 @@
+Finish the program in problems.cc with assembly code and C++ code.
+
+Create an assembly code file with the extension name .s
+Write functions setBit, clearBit, flip, replaceBits, buildColor.
+Write the function choose using loop in problems.cc
+Complete and compile the code.
+Submit the code on canvas: Lab 10 Bit Manipulation (cpp) and Lab 10 Bit Manipulation (asm)
